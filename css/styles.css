@@ -1,85 +1,30 @@
-/* Retro arcade inspired styles */
+/* Classic arcade shooter theme */
 :root{
-  --bg:#030814;
-  --grid:#0f1724;
-  --neon:#00ffcc;
-  --accent:#ff2d95;
-  --muted:#9aa4b2;
+  --bg:#000;
+  --accent:#00e6ff;
+  --accent-2:#ff00d0;
+  --muted:#9b9b9b;
 }
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background: radial-gradient(ellipse at bottom, #0b0f1a 0%, var(--bg) 60%);
-  color:var(--muted);
-  -webkit-font-smoothing:antialiased;
-}
-.site-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 36px;
-  border-bottom:4px solid rgba(255,45,149,0.06);
-}
-.logo{
-  font-family:'Press Start 2P', monospace;
-  color:var(--neon);
-  font-size:20px;
-  letter-spacing:2px;
-}
-.nav a{
-  color:var(--muted);
-  margin-left:18px;
-  text-decoration:none;
-  font-size:13px;
-}
-.hero{
-  padding:60px 20px;
-  text-align:center;
-  background-image:linear-gradient(180deg, rgba(0,0,0,0.12), transparent);
-}
-.hero-inner h1{
-  font-family:'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', monospace, system-ui;
+  background: radial-gradient(circle at 10% 10%, rgba(0,230,255,0.06), transparent 10%), linear-gradient(180deg,#001 0%, #000 60%);
   color:var(--accent);
-  margin:10px 0 6px;
-  font-size:28px;
-}
-.tagline{
-  color:var(--neon);
-  margin:0 0 18px;
-}
-.btn{
-  display:inline-block;
-  padding:12px 18px;
-  background:linear-gradient(90deg, rgba(0,255,204,0.12), rgba(255,45,149,0.06));
-  color:var(--neon);
-  border:2px solid rgba(0,255,204,0.18);
-  text-decoration:none;
-  margin:0 8px;
-  font-size:12px;
-}
-.btn.ghost{
-  background:transparent;
-  border-color:rgba(255,255,255,0.04);
-}
-.panel{
-  padding:36px 20px;
-}
-.cards{
+  min-height:100vh;
   display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  align-items:center;
 }
-.card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border:1px solid rgba(255,255,255,0.03);
-  padding:18px;
-  min-width:160px;
-  color:#e6eef6;
-}
-.site-footer{
-  padding:18px 20px;
-  text-align:center;
-  color:rgba(255,255,255,0.2);
-  border-top:1px dashed rgba(255,255,255,0.03);
-}
+.site-header{width:100%;padding:28px 24px;text-align:center;border-bottom:4px solid rgba(0,230,255,0.06)}
+.site-header h1{margin:0;font-size:28px;color:var(--accent-2);text-shadow:0 0 8px rgba(255,0,208,0.12)}
+.tagline{margin:6px 0 0;color:var(--muted);font-size:10px}
+.hero{max-width:980px;width:100%;padding:48px 16px;display:flex;gap:24px;align-items:center}
+.intro{flex:1}
+.intro h2{color:var(--accent);font-size:18px;margin:0 0 12px}
+.intro p{color:rgba(0,230,255,0.85);font-size:11px;line-height:1.6}
+.cta{display:inline-block;margin-top:14px;padding:12px 20px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#000;text-decoration:none;border-radius:4px;font-weight:700}
+.screenshot{width:320px}
+.screen-placeholder{height:200px;border:3px dashed rgba(0,230,255,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+.site-footer{width:100%;padding:18px 12px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:auto}
+@media (max-width:720px){.hero{flex-direction:column}.screenshot{width:100%}.site-header h1{font-size:20px}}
