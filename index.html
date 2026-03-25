@@ -4,47 +4,63 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BattleBuds — Classic Arcade</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <h1 class="logo">BATTLEBUDS</h1>
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#squads">Squads</a>
-      <a href="#join">Join</a>
-    </nav>
+    <div class="container">
+      <h1 class="logo">BATTLEBUDS</h1>
+      <nav class="nav">
+        <a href="#play">Play</a>
+        <a href="#squads">Squads</a>
+        <a href="#rules">Rules</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="hero">
-    <section class="intro">
-      <h2>Real-time persistent war</h2>
-      <p>Squad-based tactics. Classic arcade vibes. Join the fight.</p>
-      <a class="cta" href="#join">Enlist Now</a>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Real-time persistent war</h2>
+        <p>Squad-based tactics. Classic arcade styling. Fight for control.</p>
+        <a class="cta" href="#play">Enter the War</a>
+      </div>
     </section>
-    <div class="ship"></div>
+
+    <section id="features" class="features container">
+      <article>
+        <h3>Persistent World</h3>
+        <p>Campaigns that evolve over time — your actions matter.</p>
+      </article>
+      <article>
+        <h3>Squad Tactics</h3>
+        <p>Coordinate with friends to seize victory.</p>
+      </article>
+      <article>
+        <h3>Arcade Combat</h3>
+        <p>Fast-paced shooter mechanics with retro visuals.</p>
+      </article>
+    </section>
+
+    <section id="play" class="showcase">
+      <div class="container">
+        <h3>How to Play</h3>
+        <ol>
+          <li>Join or create a squad</li>
+          <li>Pick your loadout</li>
+          <li>Capture objectives and survive</li>
+        </ol>
+      </div>
+    </section>
+
   </main>
 
-  <section id="about" class="panel">
-    <h3>About BattleBuds</h3>
-    <p>BattleBuds is a persistent, real-time battle arena with squad mechanics and retro arcade style.</p>
-  </section>
-
-  <section id="squads" class="panel">
-    <h3>Squads</h3>
-    <div class="cards">
-      <div class="card">Alpha Squad</div>
-      <div class="card">Bravo Squad</div>
-      <div class="card">Charlie Squad</div>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© BattleBuds — Classic Arcade Style</small>
     </div>
-  </section>
-
-  <section id="join" class="panel">
-    <h3>Join the War</h3>
-    <p>Sign up and jump into the action.</p>
-    <button class="cta">Create Squad</button>
-  </section>
-
-  <footer class="site-footer">© BattleBuds</footer>
+  </footer>
 </body>
 </html>

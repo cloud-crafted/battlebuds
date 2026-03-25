@@ -1,26 +1,30 @@
-/* Retro arcade aesthetic */
+/* Classic arcade shooter aesthetic */
 :root{
-  --bg:#030214;
-  --neon:#39ff14;
-  --accent:#ff2d95;
-  --panel:#0b1020;
+  --bg:#03040a;
+  --neon:#00e6ff;
+  --accent:#ff005c;
+  --muted:#9aa7c7;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family: 'Courier New', Courier, monospace;background:linear-gradient(180deg,var(--bg),#05031a);color:#e6f7ff}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:3px solid rgba(57,255,20,0.06)}
-.logo{font-size:36px;letter-spacing:6px;color:var(--neon);text-shadow:0 0 8px rgba(57,255,20,0.15),2px 2px 0 #000}
-.main-nav a{color:#9fb8ff;margin-left:18px;text-decoration:none}
-.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 40px}
-.intro h2{font-size:42px;margin:0;color:var(--accent);text-shadow:0 2px 0 #000}
-.intro p{margin-top:10px;color:#cfe8ff}
-.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#05020b;font-weight:bold;border-radius:6px;text-decoration:none}
-.ship{width:180px;height:100px;background:linear-gradient(90deg,#222,#111);border:4px solid #0ff;box-shadow:0 0 20px rgba(0,255,255,0.12);border-radius:6px}
-.panel{background:rgba(255,255,255,0.02);margin:28px 40px;padding:22px;border-radius:8px;border:2px solid rgba(255,255,255,0.03)}
-.cards{display:flex;gap:12px;margin-top:12px}
-.card{flex:1;padding:18px;background:linear-gradient(180deg,#081028,#08142a);border:2px solid rgba(57,255,20,0.06);text-align:center;border-radius:6px}
-.site-footer{text-align:center;padding:20px;color:#8fb0ff}
+body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#001021 0%,var(--bg) 60%);color:var(--neon);}
+.container{max-width:960px;margin:0 auto;padding:2rem}
+.site-header{border-bottom:4px solid rgba(255,255,255,0.03);background:rgba(0,0,0,0.2)}
+.logo{font-size:1.25rem;letter-spacing:6px;margin:0;padding:1rem 0}
+.nav{float:right}
+.nav a{color:var(--neon);text-decoration:none;margin-left:1rem;opacity:0.95}
+.hero{padding:4rem 0;text-align:center;background-image:radial-gradient(circle at 20% 10%, rgba(0,230,255,0.06), transparent 10%), radial-gradient(circle at 80% 90%, rgba(255,0,92,0.03), transparent 10%)}
+.hero h2{font-size:1.5rem;margin:0 0 1rem;color:var(--accent)}
+.hero p{color:var(--muted);max-width:700px;margin:0 auto 1.5rem}
+.cta{display:inline-block;padding:.75rem 1.25rem;border:2px solid var(--neon);color:var(--neon);text-decoration:none;border-radius:6px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:2rem 0}
+.features article{background:rgba(255,255,255,0.02);padding:1rem;border:1px solid rgba(255,255,255,0.02)}
+.showcase{padding:2rem;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+.site-footer{border-top:4px solid rgba(255,255,255,0.03);padding:1rem;text-align:center;color:var(--muted)}
 
-/* Pixel-ish accent */
-h1,h2,h3{font-family:monospace}
+/* pixel border accent */
+.container{background-image:repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0 2px, transparent 2px 8px)}
 
-@media (max-width:800px){.hero{flex-direction:column;text-align:center}.main-nav{display:none}}
+@media (max-width:600px){
+  .nav{float:none;text-align:center;margin-top:.5rem}
+  .logo{display:block;text-align:center}
+}
