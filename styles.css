@@ -1,11 +1,28 @@
-/* Basic styles for BattleBuds prototype */
-:root{--bg:#0f1720;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;color-scheme:dark}
+/* Classic arcade inspired CSS for BattleBuds */
+:root{
+  --bg:#08121a;
+  --accent:#ffcc00;
+  --neon:#39ff14;
+  --muted:#9fb4c6;
+  --wrap:1100px;
+  --mono: 'Press Start 2P', monospace;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef6;line-height:1.4}
-header{padding:2rem;text-align:center}
-h1{margin:0;font-size:1.6rem}
-.hero{padding:2rem;text-align:center}
-.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:2rem}
-.features article{background:var(--card);padding:1rem;border-radius:8px}
-footer{padding:1rem;text-align:center;color:var(--muted)}
+html,body{height:100%;margin:0;font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+body{background:linear-gradient(180deg,#071018 0%,var(--bg) 100%);color:var(--muted);}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:2rem}
+.site-header{border-bottom:3px solid rgba(255,204,0,0.08);padding:1rem 0}
+.logo{color:var(--accent);font-family:var(--mono);letter-spacing:2px;margin:0}
+.tag{margin:0;color:#7ea0b6}
+.hero{padding:6rem 0;text-align:center;background-image:radial-gradient(circle at 10% 10%, rgba(57,255,20,0.04), transparent 10%);}
+.hero h2{color:var(--neon);font-size:2rem;margin:0 0 1rem;font-family:var(--mono)}
+.hero p{max-width:60ch;margin:0 auto 1.5rem;color:#b9d1dd}
+.cta{display:inline-block;background:linear-gradient(90deg,#ffcc00,#ff9900);color:#08121a;padding:.9rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:700}
+.features{padding:3rem 0}
+.features h3{color:var(--accent);font-family:var(--mono)}
+.features ul{display:flex;gap:1rem;list-style:none;padding:0;margin:1rem 0}
+.features li{background:rgba(255,255,255,0.02);padding:1rem;border:1px solid rgba(255,204,0,0.04);border-radius:6px;flex:1}
+.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:1rem 0;margin-top:4rem;color:#6f8a98;text-align:center}
+
+/* Decorative pixel grid */
+.pixel-grid{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.01) 0 1px,transparent 1px 12px),repeating-linear-gradient(0deg,rgba(255,255,255,0.01) 0 1px,transparent 1px 12px)}
