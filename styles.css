@@ -1,11 +1,26 @@
-/* Basic styles for BattleBuds prototype */
-:root{--bg:#0f1720;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;color-scheme:dark}
+/* Retro arcade aesthetic */
+:root{
+  --bg:#030214;
+  --neon:#39ff14;
+  --accent:#ff2d95;
+  --panel:#0b1020;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef6;line-height:1.4}
-header{padding:2rem;text-align:center}
-h1{margin:0;font-size:1.6rem}
-.hero{padding:2rem;text-align:center}
-.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:2rem}
-.features article{background:var(--card);padding:1rem;border-radius:8px}
-footer{padding:1rem;text-align:center;color:var(--muted)}
+body{margin:0;font-family: 'Courier New', Courier, monospace;background:linear-gradient(180deg,var(--bg),#05031a);color:#e6f7ff}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:3px solid rgba(57,255,20,0.06)}
+.logo{font-size:36px;letter-spacing:6px;color:var(--neon);text-shadow:0 0 8px rgba(57,255,20,0.15),2px 2px 0 #000}
+.main-nav a{color:#9fb8ff;margin-left:18px;text-decoration:none}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 40px}
+.intro h2{font-size:42px;margin:0;color:var(--accent);text-shadow:0 2px 0 #000}
+.intro p{margin-top:10px;color:#cfe8ff}
+.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#05020b;font-weight:bold;border-radius:6px;text-decoration:none}
+.ship{width:180px;height:100px;background:linear-gradient(90deg,#222,#111);border:4px solid #0ff;box-shadow:0 0 20px rgba(0,255,255,0.12);border-radius:6px}
+.panel{background:rgba(255,255,255,0.02);margin:28px 40px;padding:22px;border-radius:8px;border:2px solid rgba(255,255,255,0.03)}
+.cards{display:flex;gap:12px;margin-top:12px}
+.card{flex:1;padding:18px;background:linear-gradient(180deg,#081028,#08142a);border:2px solid rgba(57,255,20,0.06);text-align:center;border-radius:6px}
+.site-footer{text-align:center;padding:20px;color:#8fb0ff}
+
+/* Pixel-ish accent */
+h1,h2,h3{font-family:monospace}
+
+@media (max-width:800px){.hero{flex-direction:column;text-align:center}.main-nav{display:none}}
