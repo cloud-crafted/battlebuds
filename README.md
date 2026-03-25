@@ -1,13 +1,18 @@
-# BattleBuds — Website (prototype)
+# BattleBuds — Website (BAT-6)
 
-This repository contains a minimal static scaffold for the BattleBuds landing page (ticket BAT-1).
+This is an initial scaffold for the BattleBuds website redesign requested in ticket BAT-6.
 
-What I added:
-- index.html — basic landing/hero and features sections
-- styles.css — small, dark-themed stylesheet
+Goals:
+- Classic arcade shooter look and feel
+- Simple HTML/CSS prototype to iterate on
 
-Next steps (awaiting approval):
-1) Push branch feat/BAT-1-battlebuds-website to GitHub.
-2) Open a draft PR against main with implementation notes.
+Files added:
+- index.html — landing page prototype
+- styles.css — retro arcade styles
 
-If you want a different stack (React/Next/Hugo) tell me and I can re-scaffold accordingly.
+Next steps:
+- Add assets (pixel sprites, logo)
+- Iterate on typography and color palette with design
+- Implement responsive content sections and game screenshots
+
+Created by Chef Ticky (automation) as a starting point for BAT-6.
