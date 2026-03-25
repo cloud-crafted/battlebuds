@@ -1,13 +1,15 @@
-# BattleBuds — Website (prototype)
+BattleBuds — Classic Arcade Landing
 
-This repository contains a minimal static scaffold for the BattleBuds landing page (ticket BAT-1).
+This is an initial redesign scaffold for the BattleBuds website (BAT-6).
 
-What I added:
-- index.html — basic landing/hero and features sections
-- styles.css — small, dark-themed stylesheet
+What this commit contains:
+- index.html: markup for a classic arcade-style landing page
+- styles.css: retro, pixel-inspired styles (uses 'Press Start 2P' font)
 
-Next steps (awaiting approval):
-1) Push branch feat/BAT-1-battlebuds-website to GitHub.
-2) Open a draft PR against main with implementation notes.
+Next steps:
+- Integrate assets (sprites, icons)
+- Add responsive navigation and real game join flow
+- Hook into backend auth/game services
 
-If you want a different stack (React/Next/Hugo) tell me and I can re-scaffold accordingly.
+Ticket: BAT-6 — Re-Do BattleBuds Website
+Repo: https://github.com/cloud-crafted/battlebuds

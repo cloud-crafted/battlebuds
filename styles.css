@@ -1,11 +1,26 @@
-/* Basic styles for BattleBuds prototype */
-:root{--bg:#0f1720;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;color-scheme:dark}
+:root{
+  --bg:#05080b;
+  --panel:#0f1720;
+  --accent:#ff3b3b;
+  --accent-2:#ffd24a;
+  --muted:#9ba6b2;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef6;line-height:1.4}
-header{padding:2rem;text-align:center}
-h1{margin:0;font-size:1.6rem}
-.hero{padding:2rem;text-align:center}
-.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:2rem}
-.features article{background:var(--card);padding:1rem;border-radius:8px}
-footer{padding:1rem;text-align:center;color:var(--muted)}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', system-ui, monospace;background: radial-gradient(circle at 20% 10%, rgba(255,59,59,0.06), transparent 200px), var(--bg);color:#fff}
+.site-header{padding:36px 24px;text-align:center}
+.logo{font-size:28px;color:var(--accent);margin:0;letter-spacing:2px}
+.tag{color:var(--muted);font-size:10px;margin-top:8px}
+.hero{display:flex;align-items:center;justify-content:center;height:60vh}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));border:3px solid rgba(255,255,255,0.06);padding:32px;width:min(900px,92%);text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.panel h2{color:var(--accent-2);font-size:20px;margin:0 0 12px}
+.panel p{color:var(--muted);font-size:12px;line-height:1.6}
+.actions{margin-top:18px;display:flex;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 18px;border-radius:6px;background:transparent;color:var(--accent-2);text-decoration:none;border:2px solid rgba(255,255,255,0.06);font-size:10px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#ff8a6b);color:#0b0b0b;border:none}
+.about{padding:28px 20px;text-align:center;background:linear-gradient(90deg, rgba(255,255,59,0.02), transparent);border-top:1px dashed rgba(255,255,255,0.02)}
+.site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:10px}
+/* retro scanline */
+body::after{content:"";position:fixed;inset:0;background-image:repeating-linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.02) 1px);pointer-events:none;mix-blend-mode:overlay}
+
+/* responsive */
+@media (max-width:600px){.logo{font-size:18px}.panel{padding:20px}}
