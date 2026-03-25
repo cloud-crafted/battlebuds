@@ -1,11 +1,22 @@
-/* Basic styles for BattleBuds prototype */
-:root{--bg:#0f1720;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef6;line-height:1.4}
-header{padding:2rem;text-align:center}
-h1{margin:0;font-size:1.6rem}
-.hero{padding:2rem;text-align:center}
-.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:2rem}
-.features article{background:var(--card);padding:1rem;border-radius:8px}
-footer{padding:1rem;text-align:center;color:var(--muted)}
+/* Classic arcade shooter look */
+:root{
+  --bg:#06121a;
+  --neon:#00e5ff;
+  --accent:#ff3b81;
+  --muted:#9fb7c6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family: 'Press Start 2P', system-ui, sans-serif;background:linear-gradient(180deg,var(--bg),#001927);color:var(--neon);padding:2rem}
+.site-header{text-align:center;margin-bottom:2rem}
+.logo{font-size:2.4rem;letter-spacing:0.25rem;color:var(--accent);text-shadow:0 0 8px rgba(255,59,129,0.6),0 0 16px rgba(0,229,255,0.08)}
+.tag{color:var(--muted);margin-top:.5rem;font-size:.65rem}
+.hero{display:flex;flex-direction:column;gap:1.5rem;align-items:center}
+.intro{background:rgba(255,255,255,0.02);padding:1.25rem;border:1px solid rgba(0,229,255,0.06);width:min(900px,96%);text-align:center;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+.intro h2{color:var(--neon);font-size:1rem;margin-bottom:.6rem}
+.intro p{color:var(--muted);margin-bottom:1rem;font-size:.72rem}
+.cta{display:inline-block;padding:.6rem 1rem;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; border-radius:6px;font-weight:700;text-decoration:none}
+.features{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap;justify-content:center}
+.features article{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:6px;border:1px solid rgba(0,229,255,0.04);width:220px;text-align:center}
+.features h3{color:var(--accent);font-size:.75rem;margin-bottom:.4rem}
+.site-footer{text-align:center;margin-top:2rem;color:var(--muted);font-size:.65rem}
