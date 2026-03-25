@@ -1,13 +1,8 @@
-# BattleBuds — Website (prototype)
+BattleBuds demo site
 
-This repository contains a minimal static scaffold for the BattleBuds landing page (ticket BAT-1).
+This repository contains a very small static site for the BattleBuds project. It includes:
 
-What I added:
-- index.html — basic landing/hero and features sections
-- styles.css — small, dark-themed stylesheet
+- index.html — home page with a link to the dolphin page
+- dolphin.html — page displaying a dolphin image (sourced from Wikimedia Commons)
 
-Next steps (awaiting approval):
-1) Push branch feat/BAT-1-battlebuds-website to GitHub.
-2) Open a draft PR against main with implementation notes.
-
-If you want a different stack (React/Next/Hugo) tell me and I can re-scaffold accordingly.
+This change was created to satisfy ticket BAT-2: "Add Page to BattleBuds Site".
