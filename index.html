@@ -3,26 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BattleBuds</title>
+  <title>BattleBuds — Classic Arcade</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>BattleBuds</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="dolphin.html">Dolphin Page</a>
-    </nav>
-  </header>
+  <main class="container">
+    <header class="mast">
+      <h1 class="logo">BATTLEBUDS</h1>
+      <p class="tag">A persistent real-time war. Squad-based tactics. Retro arcade style.</p>
+    </header>
 
-  <main>
-    <p>Welcome to the BattleBuds site. Explore our pages:</p>
-    <ul>
-      <li><a href="dolphin.html">Dolphin Page</a> — a new page with a dolphin image (BAT-2)</li>
-    </ul>
+    <section class="hero">
+      <div class="screen">
+        <div class="ship">▲</div>
+        <div class="enemy">■</div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#play">Play Now</a>
+        <a class="btn ghost" href="#learn">Learn More</a>
+      </div>
+    </section>
+
+    <section class="about" id="learn">
+      <h2>Classic meets persistence</h2>
+      <p>We redesigned BattleBuds with a classic arcade look and feel — pixel-perfect lines, neon colors, and bold typography. Built with HTML & CSS for a lightweight landing experience.</p>
+    </section>
+
+    <footer>
+      <small>© BattleBuds — persistent real-time squad warfare</small>
+    </footer>
   </main>
-
-  <footer>
-    <p>© BattleBuds</p>
-  </footer>
 </body>
 </html>

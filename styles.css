@@ -1,11 +1,24 @@
-/* Basic styles for BattleBuds prototype */
-:root{--bg:#0f1720;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;color-scheme:dark}
+/* Retro arcade inspired styles */
+:root{
+  --bg:#02020a;
+  --panel:#07102a;
+  --accent:#ff2d95;
+  --accent2:#00e6ff;
+  --muted:#9aa5c6;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,"Helvetica Neue",Arial;background:var(--bg);color:#e6eef6;line-height:1.4}
-header{padding:2rem;text-align:center}
-h1{margin:0;font-size:1.6rem}
-.hero{padding:2rem;text-align:center}
-.cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:2rem}
-.features article{background:var(--card);padding:1rem;border-radius:8px}
-footer{padding:1rem;text-align:center;color:var(--muted)}
+html,body{height:100%;margin:0;font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;background:linear-gradient(180deg,var(--bg),#040417);color:var(--muted)}
+.container{max-width:980px;margin:3rem auto;padding:2rem;background:rgba(0,0,0,0.25);border:2px solid rgba(255,255,255,0.04);border-radius:8px}
+.mast{text-align:center;margin-bottom:1.5rem}
+.logo{font-family: 'Courier New', Courier, monospace;font-size:3rem;color:var(--accent);letter-spacing:6px;margin:0;text-shadow:0 0 8px rgba(255,45,149,0.12),0 0 20px rgba(0,230,255,0.04)}
+.tag{margin:0.5rem 0;color:var(--muted)}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.screen{flex:1;background:linear-gradient(180deg,#07122b,#0b1b3a);border:4px solid rgba(255,255,255,0.03);padding:2rem;border-radius:6px;min-height:160px;position:relative;overflow:hidden}
+.ship{position:absolute;left:20%;bottom:18%;color:var(--accent);font-size:2.5rem;transform:translateX(-50%);text-shadow:0 0 6px rgba(255,45,149,0.25)}
+.enemy{position:absolute;right:18%;top:22%;color:var(--accent2);font-size:1.8rem;text-shadow:0 0 6px rgba(0,230,255,0.14)}
+.cta{display:flex;flex-direction:column;gap:.6rem}
+.btn{display:inline-block;padding:.8rem 1.2rem;border-radius:6px;background:linear-gradient(180deg,var(--accent),#b2006f);color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.btn.ghost{background:transparent;color:var(--accent2);border:2px solid rgba(0,230,255,0.06);font-weight:600}
+.about{margin-top:1.2rem;padding:1rem;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:6px}
+footer{margin-top:1rem;text-align:center;color:rgba(255,255,255,0.28)}
+@media(max-width:720px){.hero{flex-direction:column}.cta{flex-direction:row;justify-content:center}}
