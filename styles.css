@@ -1,25 +1,27 @@
-/* Classic arcade shooter aesthetic */
+/* Retro arcade shooter theme */
 :root{
-  --bg:#07111f;
-  --accent:#ff3b3b;
-  --accent-2:#ffd166;
-  --text:#e6f0ff;
-  --mono: 'Press Start 2P', monospace;
+  --bg:#05060b;
+  --neon:#33ffcc;
+  --accent:#ff3366;
+  --muted:#9aa3b2;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Arial, Helvetica, sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #021018 70%);color:var(--text)}
-.site-header{padding:28px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.04)}
-.site-header h1{font-family:var(--mono);letter-spacing:2px;color:var(--accent-2);margin:0;font-size:28px}
-.tagline{margin:4px 0 0;color:rgba(230,240,255,0.8)}
-.hero{display:flex;align-items:center;justify-content:center;min-height:60vh}
-.console{background:rgba(0,0,0,0.25);padding:28px;border:3px solid rgba(255,255,255,0.06);box-shadow:0 10px 30px rgba(0,0,0,0.6);text-align:center;border-radius:8px}
-.console h2{font-family:var(--mono);font-size:18px;color:var(--accent);margin:0 0 8px}
-.console p{margin:0 0 12px}
-button.start{font-family:var(--mono);background:linear-gradient(90deg,var(--accent),#ff8a8a);border:none;color:#111;padding:12px 20px;border-radius:6px;cursor:pointer}
-.site-footer{text-align:center;padding:18px;font-size:12px;color:rgba(230,240,255,0.6)}
+html,body{height:100%}
+body{
+  margin:0;font-family:monospace, 'Courier New', monospace;background:linear-gradient(180deg, #071028 0%, var(--bg) 60%);color:var(--neon);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 36px;border-bottom:2px solid rgba(255,255,255,0.03)}
+.logo{font-weight:900;letter-spacing:6px;font-size:22px;color:var(--accent);text-shadow:0 0 8px rgba(255,51,102,0.35)}
+.nav a{color:var(--neon);margin-left:14px;text-decoration:none;padding:8px;border-radius:4px}
+.nav a:hover{background:rgba(51,255,204,0.04)}
+.hero{padding:80px 36px;text-align:center}
+.hero h1{font-size:48px;margin:0 0 8px;color:var(--neon);text-shadow:0 0 10px rgba(51,255,204,0.08)}
+.hero p{color:var(--muted);max-width:720px;margin:0 auto 18px}
+.cta{display:inline-block;padding:12px 22px;background:linear-gradient(90deg,var(--accent),#ff9aa2);color:#fff;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.features{display:flex;gap:18px;padding:36px;justify-content:center}
+.feature{background:rgba(255,255,255,0.02);padding:18px 24px;border-radius:8px;color:var(--muted)}
+.site-footer{text-align:center;padding:18px;color:rgba(51,255,204,0.4);border-top:1px solid rgba(255,255,255,0.02)}
 
-/* Simple CRT scanlines */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
+/* Pixelated heading */
+@media (min-width:600px){.hero h1{font-family:monospace;font-weight:700;letter-spacing:2px}}
