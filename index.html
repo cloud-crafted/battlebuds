@@ -1,29 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BattleBuds — Classic</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BattleBuds — Classic Arcade</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="stars"></div>
   <header class="site-header">
-    <h1>BattleBuds</h1>
-    <p class="tag">Real-time persistent war • Squad tactics</p>
+    <div class="logo">BATTLEBUDS</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#squads">Squads</a>
+      <a href="#play">Play</a>
+    </nav>
   </header>
 
   <main class="hero">
-    <div class="panel">
-      <h2>Welcome Commander</h2>
-      <p>Return to the classic arcade era — rally your squad and dominate the battlefield.</p>
-      <a class="cta" href="#play">Join the Fight</a>
+    <div class="hero-inner">
+      <h1>Real-time persistent war</h1>
+      <p class="tagline">Squad tactics. Classic arcade feel.</p>
+      <div class="cta">
+        <a class="btn" href="#play">Join the War</a>
+        <a class="btn ghost" href="#about">Learn More</a>
+      </div>
     </div>
   </main>
 
+  <section id="about" class="panel">
+    <h2>About BattleBuds</h2>
+    <p>BattleBuds is a persistent, real-time squad-based war with an arcade shooter aesthetic. This site reimagines the frontend with classic pixel-art styling and vibrant neon contrasts.</p>
+  </section>
+
+  <section id="squads" class="panel">
+    <h2>Squads & Tactics</h2>
+    <div class="cards">
+      <div class="card">Squad Alpha</div>
+      <div class="card">Squad Bravo</div>
+      <div class="card">Squad Charlie</div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <small>© BattleBuds — persistent real-time warfare</small>
+    <small>© BattleBuds — Retro build • Prototype</small>
   </footer>
 </body>
 </html>

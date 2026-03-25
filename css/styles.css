@@ -1,0 +1,85 @@
+/* Retro arcade inspired styles */
+:root{
+  --bg:#030814;
+  --grid:#0f1724;
+  --neon:#00ffcc;
+  --accent:#ff2d95;
+  --muted:#9aa4b2;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background: radial-gradient(ellipse at bottom, #0b0f1a 0%, var(--bg) 60%);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 36px;
+  border-bottom:4px solid rgba(255,45,149,0.06);
+}
+.logo{
+  font-family:'Press Start 2P', monospace;
+  color:var(--neon);
+  font-size:20px;
+  letter-spacing:2px;
+}
+.nav a{
+  color:var(--muted);
+  margin-left:18px;
+  text-decoration:none;
+  font-size:13px;
+}
+.hero{
+  padding:60px 20px;
+  text-align:center;
+  background-image:linear-gradient(180deg, rgba(0,0,0,0.12), transparent);
+}
+.hero-inner h1{
+  font-family:'Press Start 2P', monospace;
+  color:var(--accent);
+  margin:10px 0 6px;
+  font-size:28px;
+}
+.tagline{
+  color:var(--neon);
+  margin:0 0 18px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  background:linear-gradient(90deg, rgba(0,255,204,0.12), rgba(255,45,149,0.06));
+  color:var(--neon);
+  border:2px solid rgba(0,255,204,0.18);
+  text-decoration:none;
+  margin:0 8px;
+  font-size:12px;
+}
+.btn.ghost{
+  background:transparent;
+  border-color:rgba(255,255,255,0.04);
+}
+.panel{
+  padding:36px 20px;
+}
+.cards{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  padding:18px;
+  min-width:160px;
+  color:#e6eef6;
+}
+.site-footer{
+  padding:18px 20px;
+  text-align:center;
+  color:rgba(255,255,255,0.2);
+  border-top:1px dashed rgba(255,255,255,0.03);
+}
