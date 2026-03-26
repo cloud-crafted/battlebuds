@@ -1,15 +1,16 @@
-# BattleBuds — Classic Arcade Redesign
+# BattleBuds — Website (initial scaffold)
 
-This branch contains an initial HTML/CSS redesign for the BattleBuds website in a classic arcade shooter style.
+This repository contains an initial static scaffold for the BattleBuds website requested in ticket BAT-6.
 
-Files:
-- index.html — landing page with retro-themed hero and features
-- styles.css — visual styles (neon palette, scanline effect, pixel feel)
+What I added:
+- index.html — basic landing page using a classic arcade aesthetic
+- styles.css — initial styles (retro colors, scanline effect)
+- README.md — this file
 
-Next steps:
-- Replace placeholder copy with game-specific content
-- Add assets (pixel art, logo) and favicon
-- Integrate with existing site templates or framework
-- Accessibility and responsive tweaks
+Next steps (suggested):
+- Replace fonts with a pixel/arcade webfont and add assets (sprites, logos)
+- Add responsive layout and mobile tweaks
+- Integrate with the project's actual frontend framework (if any)
+- Wire up backend and realtime components
 
-Ticket: BAT-6
+Ticket: BAT-6 — Re-Do BattleBuds Website
