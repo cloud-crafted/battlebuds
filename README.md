@@ -1,11 +1,10 @@
-# BattleBuds — Website Redesign
+BattleBuds — Classic arcade website redesign
 
-This repository hosts the BattleBuds website. Ticket BAT-6: Re-Do BattleBuds Website — implement a classic arcade shooter look using HTML & CSS.
+This is a simple HTML/CSS redesign for the BattleBuds website (task BAT-6). It provides a retro arcade-styled landing page and starting assets.
 
-This initial commit contains a simple static landing page (index.html) and styles (styles.css) as a starting point for the redesign.
+Files:
+- index.html
+- styles.css
 
-Next steps:
-- Add assets (pixel sprites, background art)
-- Add responsive tweaks and accessibility improvements
-- Integrate with game server status and Play links
-- Iterate on branding and copy
+Notes:
+- Replace placeholder content and add assets (sprite art, logos) as needed.

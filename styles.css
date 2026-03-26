@@ -1,30 +1,25 @@
-/* Classic arcade inspired styles */
+/* Classic arcade shooter look */
 :root{
-  --bg:#081229; /* deep navy */
-  --accent:#00ffd5; /* neon teal */
-  --accent-2:#ff3b3b; /* red */
-  --panel:#0b1b33;
-  --text:#e6f0ff;
+  --bg:#071019;
+  --panel:#0f1724;
+  --accent:#ff0044;
+  --accent2:#00e0ff;
+  --muted:#9aa4b2;
 }
-
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', 'Courier New', monospace;background:linear-gradient(180deg,var(--bg),#031028);color:var(--text)}
-
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;border-bottom:2px solid rgba(0,255,213,0.06)}
-.logo{font-size:20px;letter-spacing:3px;color:var(--accent);text-shadow:0 0 8px rgba(0,255,213,0.12)}
-.nav a{color:var(--text);margin-left:16px;text-decoration:none;font-size:12px}
-
-.hero{padding:48px 20px;text-align:center;background-image:radial-gradient(circle at 50% 30%, rgba(0,255,213,0.06), transparent 20%), url('');background-size:cover}
-.hero-inner{max-width:900px;margin:0 auto;padding:48px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
-.hero h2{font-size:28px;margin:0 0 8px;color:var(--accent)}
-.hero p{margin:0 0 16px;color:#bfeee8}
-.btn{display:inline-block;padding:12px 20px;border-radius:6px;text-decoration:none}
-.btn.primary{background:linear-gradient(90deg,var(--accent),#aaffec);color:#001;box-shadow:0 6px 18px rgba(0,255,213,0.08);font-weight:700}
-
-.panel{max-width:1000px;margin:24px auto;padding:20px;background:var(--panel);border:1px solid rgba(255,255,255,0.02);border-radius:6px}
-.panel h3{margin-top:0;color:var(--accent-2)}
-
-.site-footer{text-align:center;padding:18px;color:#7993b6;font-size:13px}
-
-/* Small responsive tweaks */
-@media (max-width:600px){.site-header{padding:12px}.hero-inner{padding:24px}.hero h2{font-size:20px}}
+html,body{height:100%;margin:0;font-family: 'Arial', "Press Start 2P", monospace;background:linear-gradient(180deg,var(--bg),#041018);color:#fff}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;background:rgba(0,0,0,0.12);border-bottom:2px solid rgba(255,255,255,0.04)}
+.logo{font-size:20px;letter-spacing:6px;color:var(--accent);text-shadow:0 0 12px rgba(255,0,68,0.35)}
+.nav a{color:var(--muted);margin-left:16px;text-decoration:none;font-size:12px}
+.hero{position:relative;padding:80px 36px;text-align:center}
+.hero h1{font-size:48px;margin:0;color:var(--accent2);text-shadow:0 0 20px rgba(0,224,255,0.2)}
+.tagline{color:var(--muted);margin-top:8px}
+.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--accent),#ff8ab3);color:white;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.scanlines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
+.content{padding:28px 36px}
+.cards{display:flex;gap:16px;margin-top:12px}
+.card{flex:1;padding:18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);min-height:80px}
+.muted{color:var(--muted);font-size:11px}
+.footer-cta{background:linear-gradient(90deg,rgba(255,0,68,0.06),rgba(0,224,255,0.03));text-align:center}
+.site-footer{padding:18px 36px;text-align:center;color:var(--muted);font-size:12px}
+@media (max-width:700px){.cards{flex-direction:column}.hero h1{font-size:32px}}

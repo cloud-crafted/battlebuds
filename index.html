@@ -8,41 +8,43 @@
 </head>
 <body>
   <header class="site-header">
-    <h1 class="logo">BATTLEBUDS</h1>
+    <div class="logo">BATTLEBUDS</div>
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#squads">Squads</a>
-      <a href="#play">Play</a>
+      <a href="#join">Join</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <h2>Real-time persistent war</h2>
-        <p>Squad-based tactics. Pixel mayhem. Classic arcade feel.</p>
-        <a class="btn primary" href="#play">Play Now</a>
-      </div>
-    </section>
-
-    <section id="about" class="panel">
-      <h3>About BattleBuds</h3>
-      <p>BattleBuds is a real-time persistent war with squad-based tactics. This redesign goes back to a classic arcade shooter look and feel using HTML & CSS.</p>
-    </section>
-
-    <section id="squads" class="panel">
-      <h3>Squads & Tactics</h3>
-      <p>Organize into squads, hold territory, and fight for victory.</p>
-    </section>
-
-    <section id="play" class="panel">
-      <h3>Play</h3>
-      <p>Server status and play links will appear here.</p>
-    </section>
+  <main class="hero">
+    <h1>Real-time persistent war</h1>
+    <p class="tagline">Squad-based tactics. Classic arcade style.</p>
+    <a class="cta" href="#join">Enlist Now</a>
+    <div class="scanlines"></div>
   </main>
 
+  <section id="about" class="content">
+    <h2>About BattleBuds</h2>
+    <p>BattleBuds is a persistent, real-time war with squad centered gameplay. This redesign returns to a classic arcade shooter aesthetic with bold colors, scanlines, and pixel type.</p>
+  </section>
+
+  <section id="squads" class="content">
+    <h2>Squads</h2>
+    <div class="cards">
+      <div class="card">Alpha<br><span class="muted">Frontline</span></div>
+      <div class="card">Bravo<br><span class="muted">Support</span></div>
+      <div class="card">Charlie<br><span class="muted">Recon</span></div>
+    </div>
+  </section>
+
+  <section id="join" class="content footer-cta">
+    <h2>Join the fight</h2>
+    <p>Sign up and deploy with your squad.</p>
+    <a class="cta" href="#">Create Account</a>
+  </section>
+
   <footer class="site-footer">
-    <p>© BattleBuds — Classic Arcade Theme</p>
+    <small>© BattleBuds</small>
   </footer>
 </body>
 </html>
