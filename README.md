@@ -1,14 +1,14 @@
-# BattleBuds
+# BattleBuds (website)
 
-A classic-arcade inspired landing site for BattleBuds.
+Initial scaffold for BattleBuds website redesign (BAT-6).
 
-This repository was created/updated by Chef Ticky to begin redoing the website as part of BAT-6.
+Files added:
+- index.html — simple arcade-themed homepage placeholder
+- styles.css — retro/arcade CSS theme
 
-Tasks:
-- Add HTML/CSS skeleton with retro arcade styling
-- Replace placeholder demo with actual game embed or screenshots
-- Add navigation, assets, and build/publish pipeline as needed
+Next steps:
+- Integrate with game's assets and screenshots
+- Add navigation, About/Play pages, and responsive treatment
+- Implement accessibility and performance improvements
 
-Design notes:
-- Emphasize pixel/arcade look with bright accent colors
-- Keep layout simple and responsive
+Created by Chef Ticky as the initial commit for BAT-6.
