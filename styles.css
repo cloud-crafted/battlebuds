@@ -1,32 +1,32 @@
-/* Classic arcade shooter look */
+/* Retro arcade inspired styles */
 :root{
-  --bg:#04040a;
-  --accent:#ff0044;
-  --accent-2:#00ffe1;
-  --muted:#b0b0c8;
+  --bg:#05060a; 
+  --panel:#0b1220;
+  --accent:#ff5a5f;
+  --accent2:#ffd166;
+  --muted:#9aa6b2;
 }
-
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:'Press Start 2P', monospace, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';background:radial-gradient(circle at 20% 10%, rgba(0,255,225,0.03), transparent 10%),var(--bg);color:#e6f2ff}
-
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:24px 48px;background:linear-gradient(180deg,rgba(255,0,68,0.04),transparent)}
-.logo{font-size:20px;color:var(--accent);letter-spacing:2px}
-.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-
-.hero{padding:80px 48px;text-align:center}
-.hero h1{font-size:36px;color:var(--accent-2);text-shadow:0 0 8px rgba(0,255,225,0.18),0 0 18px rgba(255,0,68,0.08)}
-.tag{color:var(--muted);margin:12px 0}
-.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--accent),#ff8ab0);color:#07020b;text-decoration:none;border-radius:6px;font-weight:700}
-
-.panel{padding:48px;margin:24px 48px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);border-radius:6px}
-.panel.alt{background:linear-gradient(180deg,rgba(0,0,0,0.2),transparent)}
-.features{list-style:none;padding:0;margin:12px 0;display:flex;gap:24px}
-.features li{background:rgba(255,255,255,0.02);padding:12px 18px;border-radius:4px}
-
-.site-footer{text-align:center;padding:24px;color:var(--muted);opacity:0.9}
-
-/* CRT scanline effect */
-body::after{content:'';pointer-events:none;position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 3px;mix-blend-mode:overlay;opacity:0.25}
-
-/* simple responsive */
-@media (max-width:640px){.features{flex-direction:column}.site-header{padding:16px}.hero{padding:48px 16px}.panel{margin:12px 16px}}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Press Start 2P', monospace, ui-sans-serif, system-ui;
+  background:linear-gradient(180deg,var(--bg),#0f1320);
+  color:#e6eef8;
+}
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:rgba(0,0,0,0.2);border-bottom:2px solid rgba(255,255,255,0.03);
+}
+.brand{font-size:20px;letter-spacing:3px;color:var(--accent);}
+.nav a{color:var(--muted);margin-left:14px;text-decoration:none;font-size:12px}
+.hero{padding:48px; text-align:center}
+.hero h1{font-size:32px;margin:6px 0;color:var(--accent2);text-shadow:0 1px 0 rgba(0,0,0,0.5)}
+.lead{color:var(--muted);margin-bottom:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:6px;border:2px solid rgba(255,255,255,0.06);color:inherit;background:transparent;text-decoration:none;margin:0 6px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#ff7b7b);color:#101010;font-weight:700}
+.screen{margin:28px auto 0;max-width:800px;padding:12px;background:linear-gradient(180deg,#081022,#06111b);border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.screen-inner{height:300px;background:repeating-linear-gradient(45deg,#081022 0 6px,#0b1324 6px 12px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;border-radius:4px}
+.section{padding:36px 48px;text-align:left}
+.site-footer{padding:18px 28px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+/* small responsive */
+@media (max-width:640px){.hero h1{font-size:20px}.site-header{padding:12px}.hero{padding:22px}}
