@@ -1,21 +1,37 @@
-/* Classic arcade-inspired styles for BattleBuds */
+/* BattleBuds — Classic arcade site styles (ticket BAT-6) */
 :root{
-  --bg:#07112b;
-  --panel:#0f3266;
-  --accent:#ffcc00;
-  --muted:#9db3d6;
-  --neon:#00ffea;
+  --bg:#070709;
+  --accent:#00ffea;
+  --accent2:#ff2d95;
+  --muted:#9aa0a6;
 }
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui;background:linear-gradient(180deg,var(--bg) 0%, #00122a 100%);color:var(--muted)}
-.site-header{padding:32px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.03)}
-.site-header h1{color:var(--accent);font-size:28px;margin:0;text-shadow:2px 2px 0 rgba(0,0,0,0.6)}
-.tag{color:var(--neon);font-size:10px;margin-top:6px}
-.hero{display:flex;justify-content:center;align-items:center;height:40vh}
-.panel.arcade{background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.06));padding:28px;border-radius:8px;border:2px solid rgba(255,255,255,0.04);box-shadow:0 8px 24px rgba(0,0,0,0.6);text-align:center}
-.panel h2{color:var(--accent);margin:0 0 8px 0}
-.cta{display:inline-block;margin-top:12px;padding:10px 18px;background:var(--accent);color:#001; text-decoration:none;border-radius:4px;font-weight:700}
-.features{display:flex;justify-content:space-around;padding:32px}
-.features article{max-width:220px}
-.site-footer{text-align:center;padding:18px;color:rgba(255,255,255,0.3)}
-/* Pixelated border effect */
-.panel.arcade{box-shadow: 0 0 0 3px rgba(0,0,0,0.25), inset 0 0 0 2px rgba(255,255,255,0.02)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background: radial-gradient(ellipse at center, #0b0b13 0%, #070709 60%);
+  color:var(--accent);
+  font-family: 'Press Start 2P', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:2rem;
+}
+.site-header{display:flex;flex-direction:column;align-items:center;margin-bottom:2rem}
+.logo{font-size:2rem;letter-spacing:6px;color:var(--accent2);text-shadow:0 0 8px rgba(255,45,149,0.25)}
+.tag{color:var(--muted);margin-top:.5rem;font-size:.7rem}
+.hero{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.intro h2{font-size:1rem;color:var(--accent2);margin-bottom:1rem}
+.intro p{color:var(--muted);max-width:40ch;margin-bottom:1rem}
+.cta{display:inline-block;padding:.75rem 1rem;background:linear-gradient(90deg,var(--accent),#00e6b3);color:#03100f;text-decoration:none;border-radius:6px;font-weight:700}
+.mockup .screen{width:320px;height:240px;background:#030308;border:6px solid #101018;box-shadow:0 10px 30px rgba(0,0,0,.7) inset, 0 8px 30px rgba(0,0,0,.6);position:relative;padding:1rem;color:var(--accent2);font-size:.8rem}
+.score{position:absolute;top:8px;left:8px;font-family:monospace;color:var(--accent)}
+.player{position:absolute;left:40%;bottom:20px;color:var(--accent)}
+.enemy{position:absolute;right:40%;top:40px;color:var(--accent2)}
+.site-footer{margin-top:2rem;color:var(--muted);font-size:.65rem;text-align:center}
+
+/* pixelated look for images if any */
+img{image-rendering:pixelated}
+
+@media(max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .mockup{order:2}
+}

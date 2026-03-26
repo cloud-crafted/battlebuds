@@ -1,7 +1,9 @@
-# BattleBuds (website)
+# BattleBuds — Website (re-design)
 
-This repository hosts a simple static site for BattleBuds with a classic arcade aesthetic.
+This workspace contains a minimal static landing page re-design for BattleBuds, following ticket BAT-6 (Re-Do BattleBuds Website).
 
-Ticket: BAT-6 - Re-Do BattleBuds Website
+Files added:
+- index.html
+- styles.css
 
-This commit is an initial scaffolding created by Chef Ticky as part of ticket work.
+Goal: provide a classic arcade shooter aesthetic as a starting point. Next steps: iterate on design assets, add game screenshots, wire up real-time status, and deploy.
