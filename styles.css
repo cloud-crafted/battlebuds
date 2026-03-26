@@ -1,26 +1,21 @@
-/* Classic arcade shooter style */
+/* Classic arcade shooter look */
 :root{
-  --bg:#071021;
-  --neon:#ff3d7f;
-  --accent:#00ffd5;
-  --card:#09132a;
-  --muted:#9fb4c6;
+  --bg:#0b0b12;
+  --neon:#ff2d55;
+  --accent:#00e5ff;
+  --muted:#9aa0a6;
+  --paper:#0f1720;
 }
 *{box-sizing:border-box}
-body{font-family: 'Segoe UI', Roboto, system-ui, sans-serif;background:linear-gradient(180deg,var(--bg),#021018);color:var(--muted);margin:0;padding:0;}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:2px solid rgba(255,255,255,0.03)}
-.logo{font-family: 'Press Start 2P', monospace, sans-serif;color:var(--neon);letter-spacing:4px;margin:0}
-.nav a{color:var(--muted);margin-left:14px;text-decoration:none}
-.hero{padding:64px 28px;text-align:center}
-.hero h2{font-family: 'Press Start 2P', monospace;color:var(--accent);font-size:20px;margin:0 0 12px}
-.cta{display:inline-block;padding:12px 22px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#031018;border-radius:6px;text-decoration:none;font-weight:700}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;padding:28px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-.play-section{padding:28px}
-.site-footer{text-align:center;padding:24px;border-top:1px solid rgba(255,255,255,0.02);font-size:12px}
-
-/* CRT scanlines */
-body::after{content:"";pointer-events:none;position:fixed;inset:0;background-image:linear-gradient(rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.01) 50%);background-size:100% 4px;mix-blend-mode:overlay}
-
-/* Responsive tweaks */
-@media (max-width:600px){.site-header{flex-direction:column;align-items:flex-start}.nav a{margin-left:8px}}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui;background:linear-gradient(180deg,#061019 0%,var(--bg) 100%);color:var(--accent)}
+.site-header{padding:2rem;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
+.logo{font-size:2.2rem;letter-spacing:4px;color:var(--neon);margin:0}
+.tagline{color:var(--muted);margin:0.5rem 0}
+.hero{display:flex;gap:2rem;align-items:center;justify-content:center;padding:4rem}
+.intro{max-width:560px}
+.intro h2{color:var(--neon);font-size:1rem;margin-bottom:1rem}
+.cta{display:inline-block;padding:0.8rem 1.2rem;background:linear-gradient(90deg,var(--neon),var(--accent));color:#061019;text-decoration:none;border-radius:6px;font-weight:700;margin-top:1rem}
+.arcade-screen .retro-window{width:320px;height:180px;background:#000;border:4px solid #222;box-shadow:0 0 18px rgba(0,229,255,0.12) inset,0 10px 40px rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;color:#4fd6ff}
+.site-footer{text-align:center;padding:1.5rem;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+/* small responsive tweaks */
+@media (max-width:800px){.hero{flex-direction:column;padding:2rem}.arcade-screen .retro-window{width:240px;height:135px}}
