@@ -1,25 +1,25 @@
-/* Classic arcade shooter aesthetic: dark background, neon/pixel accents */
+/* Retro arcade shooter style */
 :root{
-  --bg:#0b0b12;
+  --bg:#07060b;
   --panel:#0f1724;
-  --accent:#00ffd5;
-  --accent-2:#ff3d81;
-  --text:#e6f1ff;
-  --muted:#9fb4d6;
+  --accent:#ff0054;
+  --accent-2:#00ffe7;
+  --muted:#9aa4b2;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, -apple-system; background: radial-gradient(ellipse at center, #071026 0%, var(--bg) 60%); color:var(--text);}
-.site-header{padding:48px 16px;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
-.title{letter-spacing:6px;font-size:36px;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(0,255,213,0.12)}
-.subtitle{margin:8px 0 0;color:var(--muted);font-size:12px}
-.hero{display:flex;align-items:center;justify-content:center;height:60vh}
-.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,23,0.6);width:min(920px,92%);text-align:center}
-.panel h2{margin:0 0 12px;font-size:20px;color:var(--accent-2)}
-.panel p{color:var(--muted);margin:0 0 16px}
-.cta{display:inline-block;padding:12px 20px;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04101b;text-decoration:none;font-weight:700}
-.site-footer{text-align:center;padding:18px 12px;color:var(--muted);font-size:12px}
-
-/* simple spacer blocks to evoke pixel-grid */
-.panel::before{content:"";display:block;height:6px;background:repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 6px, transparent 6px 12px);margin-bottom:12px;border-radius:3px}
-
-@media (max-width:520px){.title{font-size:20px;letter-spacing:3px}.panel{padding:18px}}
+html,body{height:100%;margin:0;font-family: "Courier New", Courier, monospace;background:linear-gradient(180deg,var(--bg),#0b0b11);color:#e6f3ff}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:2px solid rgba(255,255,255,0.04)}
+.logo{font-size:28px;letter-spacing:2px;color:var(--accent);text-shadow:0 0 8px rgba(255,0,84,0.25),0 0 24px rgba(0,255,231,0.03)}
+.site-nav a{color:var(--muted);margin-left:16px;text-decoration:none}
+.hero{padding:84px 28px;text-align:center}
+.hero h1{font-size:56px;margin:0;color:var(--accent);text-shadow:2px 2px 0 rgba(0,0,0,0.4),0 0 18px rgba(255,0,84,0.18)}
+.tagline{color:var(--muted);margin-top:12px;margin-bottom:20px;font-size:18px}
+.cta-row{display:inline-flex;gap:12px}
+.btn{padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:700}
+.primary{background:linear-gradient(90deg,var(--accent),#ff8aa6);color:#0b0b11}
+.ghost{border:2px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:36px 28px}
+.features article{background:rgba(255,255,255,0.02);padding:18px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+.site-footer{text-align:center;padding:18px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+/* small screens */
+@media(max-width:600px){.hero h1{font-size:34px}.site-nav{display:none}}
