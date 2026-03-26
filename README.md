@@ -1,9 +1,12 @@
-# BattleBuds Website (BAT-6)
+BattleBuds — Classic Arcade Website
 
-This repo contains the initial static site for BattleBuds — a persistent, squad-based arcade shooter.
+This repo contains a simple HTML & CSS redesign for the BattleBuds site (task BAT-6). The goal is a classic arcade shooter look and feel.
 
-Local preview:
+Files added:
+- index.html
+- styles.css
 
-- Open index.html in a browser or serve with a static server (e.g. `python -m http.server`).
-
-This initial commit implements a retro arcade-inspired HTML/CSS skeleton to iterate on.
+Next steps:
+- Add assets (sprites, favicon)
+- Integrate site with game backend
+- Iterate with design feedback from Joseph
