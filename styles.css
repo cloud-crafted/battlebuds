@@ -1,21 +1,21 @@
-/* Classic arcade shooter style */
+/* Classic arcade shooter inspired styles */
 :root{
-  --bg:#05040a;
-  --neon:#00ffcc;
-  --accent:#ff0066;
-  --muted:#9aa2b2;
+  --bg:#0b0b1a;
+  --panel:#0f1724;
+  --accent:#ffde00;
+  --muted:#9aa7c1;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', 'Courier New', monospace;background: radial-gradient(ellipse at center,#081022 0%,var(--bg) 60%), #000;color:var(--neon);}
-.container{max-width:960px;margin:0 auto;padding:2rem}
-.hero{display:flex;align-items:center;justify-content:center;height:60vh;text-align:center;background-image:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 40px);}
-.logo{font-size:3rem;letter-spacing:6px;color:var(--neon);text-shadow:0 0 10px rgba(0,255,204,0.2),0 0 30px rgba(255,0,102,0.08);margin:0}
-.tag{color:var(--muted);margin-top:1rem;font-size:0.8rem}
-.links{margin-top:1.6rem}
-.btn{display:inline-block;padding:0.75rem 1.2rem;border-radius:6px;background:linear-gradient(90deg, rgba(0,255,204,0.08), rgba(255,0,102,0.06));color:var(--neon);border:1px solid rgba(0,255,204,0.12);text-decoration:none;margin:0 0.4rem}
-.btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,0.06);color:var(--muted)}
-.about{padding:3rem 0;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
-.site-footer{padding:1.5rem 0;text-align:center;color:var(--muted);font-size:0.8rem}
-
-/* Responsive */
-@media (max-width:600px){.logo{font-size:1.6rem}.container{padding:1rem}}
+body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#031028 0%,var(--bg) 60%);color:var(--accent);min-height:100vh}
+.site-header{padding:2rem;text-align:center;border-bottom:4px solid rgba(255,222,0,0.08)}
+.site-header h1{font-size:2rem;margin:0;letter-spacing:2px}
+.tagline{color:var(--muted);margin-top:.5rem}
+.hero{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:center;padding:3rem}
+.panel{background:linear-gradient(180deg, rgba(255,222,0,0.04), rgba(0,0,0,0.06));padding:2rem;border:2px solid rgba(255,222,0,0.08);width:320px;text-align:center}
+.panel h2{color:var(--accent);margin:0 0 0.5rem}
+.cta{display:inline-block;margin-top:1rem;padding:.8rem 1.2rem;background:var(--accent);color:#001;border-radius:6px;text-decoration:none;font-weight:700}
+.screen{width:480px;display:flex;align-items:center;justify-content:center}
+.game-mock{width:420px;height:260px;background:repeating-linear-gradient(45deg,#071126 0 6px,#08142a 6px 12px);border:6px solid #021028;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.features{display:flex;gap:1rem;padding:2rem;justify-content:center}
+.features article{background:var(--panel);padding:1rem;border:1px solid rgba(255,222,0,0.04);width:220px;color:var(--muted)}
+.site-footer{text-align:center;padding:1rem;color:var(--muted);border-top:1px solid rgba(255,222,0,0.02)}
