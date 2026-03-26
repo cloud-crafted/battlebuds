@@ -1,28 +1,31 @@
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{background:#060614;color:#e6f0ff;font-family:'Press Start 2P',system-ui,monospace;line-height:1.2}
-.site-header{background:linear-gradient(90deg,#0b1026 0,#1a0033 100%);padding:24px;text-align:center;border-bottom:4px solid #ffcc00}
-.logo{font-size:28px;color:#ffcc00;letter-spacing:4px;margin-bottom:8px}
-.tag{font-size:10px;color:#b8d0ff}
-
-.hero{display:flex;align-items:center;justify-content:space-between;padding:40px;gap:24px}
-.lead{flex:1}
-.lead h2{font-size:20px;color:#fff;margin-bottom:12px}
-.lead p{font-size:10px;color:#c7dbff;max-width:48ch;margin-bottom:16px}
-.cta-row{display:flex;gap:12px}
-.cta{background:#ff3344;color:#fff;padding:12px 18px;text-decoration:none;border-radius:6px;box-shadow:0 6px 0 #aa2233}
-.outline{border:2px solid #ffcc00;color:#ffcc00;padding:10px 16px;text-decoration:none;border-radius:6px}
-
-.screenshot{width:260px}
-.screen{background:#010114;border:6px solid #0b0b1a;height:180px;display:flex;align-items:center;justify-content:center;position:relative}
-.ship{width:28px;height:18px;background:linear-gradient(180deg,#ffcc00,#ff9933);clip-path:polygon(50% 0, 100% 100%, 0 100%);transform:translateY(20px)}
-.enemy{width:20px;height:12px;background:#44ddff;border-radius:2px;position:absolute;left:40px;top:36px}
-
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:28px;background:linear-gradient(180deg,#08081a,transparent,rgba(255,204,0,0.02))}
-.features h3{font-size:12px;color:#ffd27a;margin-bottom:8px}
-.features p{font-size:10px;color:#cfe6ff}
-
-.site-footer{text-align:center;padding:18px;border-top:2px solid rgba(255,204,0,0.06);font-size:10px;color:#9fb8ff}
-
-/* responsive */
-@media(max-width:800px){.hero{flex-direction:column}.screenshot{width:100%}.features{grid-template-columns:1fr}}
+/* Retro arcade shooter style */
+:root{
+  --bg:#0b0b12;
+  --panel:#0f1724;
+  --accent:#ff2d95;
+  --accent-2:#00e5ff;
+  --muted:#9aa6b2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Press Start 2P',monospace;background:linear-gradient(180deg,#000814 0%, #0b0b12 60%);color:#e6f0ff}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.site-header{padding:48px 24px 16px;text-align:center}
+.site-title{font-size:36px;letter-spacing:6px;color:var(--accent);text-shadow:0 0 8px rgba(255,45,149,0.5),0 0 20px rgba(0,229,255,0.08)}
+.tagline{color:var(--muted);margin-top:8px;font-size:12px}
+.hero{display:flex;justify-content:center;padding:16px}
+.screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:2px solid rgba(255,255,255,0.06);padding:28px;border-radius:6px;box-shadow:0 6px 30px rgba(0,0,0,0.7),inset 0 0 40px rgba(0,0,0,0.3)}
+.game-title{color:var(--accent-2);font-size:18px;margin:0 0 12px;text-shadow:0 0 6px rgba(0,229,255,0.35)}
+p{color:#cfeaff;line-height:1.4}
+.cta-row{margin-top:16px;display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:6px;background:transparent;border:2px solid rgba(255,255,255,0.06);color:#fff;text-decoration:none;transition:all .15s ease}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#060617;border:none;box-shadow:0 4px 18px rgba(255,45,149,0.18),0 2px 6px rgba(0,229,255,0.08)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,0.6)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.feature{background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.005));padding:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+.feature h3{color:var(--accent);font-size:12px;margin:0 0 8px}
+.site-footer{text-align:center;padding:20px;color:var(--muted);font-size:11px}
+/* Pixelated feel on larger screens */
+@media (min-width:800px){
+  .site-title{font-size:48px}
+  .game-title{font-size:22px}
+}

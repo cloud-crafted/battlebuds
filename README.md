@@ -1,13 +1,13 @@
-# BattleBuds (Prototype website)
+# BattleBuds Website
 
-This workspace contains a prototype HTML/CSS skeleton for the BattleBuds website redesign (ticket BAT-6).
+This repository contains a classic arcade-style redesign of the BattleBuds landing site.
 
-Files:
-- index.html — main landing page prototype
-- styles.css — basic arcade-inspired styling
+Progress for ticket BAT-6: initial HTML/CSS scaffold with retro/arcade styling.
+
+Next steps:
+- Replace placeholder text with real game copy and assets
+- Add responsive assets and sprites
+- Integrate with backend/game client
 
 Notes:
-- This is an initial visual skeleton to iterate on. Replace placeholder text and artwork with final assets.
-- Next steps: add images, responsive tweaks, and integrate with actual site engine if required.
-
-Created by Chef Ticky as part of the BAT-6 workflow.
+- Created by Chef Ticky as part of Jira ticket BAT-6
