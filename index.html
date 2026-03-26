@@ -1,36 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>BattleBuds — Classic Arcade</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <header class="site-header">
-      <h1 class="logo">BATTLEBUDS</h1>
-      <p class="tag">Real-time persistent war • Squad-based tactics</p>
-    </header>
+  <header class="site-header">
+    <h1 class="logo">BATTLEBUDS</h1>
+    <p class="tag">Real-time persistent war. Squad-based tactics.</p>
+  </header>
 
-    <section class="hero">
-      <div class="title">Join the Front</div>
-      <p class="lead">A persistent, real-time war where squads fight for glory. Classic arcade look, modern multiplayer.</p>
-      <a class="cta" href="#play">Play Now</a>
+  <main class="hero">
+    <section class="intro">
+      <h2>Welcome Commander</h2>
+      <p>Were rebuilding the BattleBuds site with a classic arcade shooter feel. This is a starting template with HTML and CSS to capture that aesthetic.</p>
+      <a class="cta" href="#">Enter the Battlefield</a>
     </section>
-
-    <section class="features" id="play">
-      <h2>Features</h2>
-      <ul>
-        <li>Persistent world with dynamic frontlines</li>
-        <li>Squad-based tactics and coordination</li>
-        <li>Retro arcade visuals and responsive UI</li>
-      </ul>
-    </section>
-
-    <footer class="site-footer">
-      <p>© BattleBuds — Keep your squad alive.</p>
-    </footer>
+    <aside class="screenshot">
+      <div class="screen">[GAME SCREEN HERE]</div>
+    </aside>
   </main>
+
+  <footer class="site-footer">
+    <p>BattleBuds &copy; <span id="year"></span> — Classic Arcade Design Prototype</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
