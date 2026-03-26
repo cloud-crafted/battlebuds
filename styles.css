@@ -1,80 +1,26 @@
-/* Classic arcade shooter aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root{
-  --bg:#06060a;
-  --neon:#00f2ff;
+  --bg:#05030a;
+  --neon:#00ffea;
   --accent:#ff2d95;
-  --panel:#0d0d12;
-  --text:#e6f7ff;
+  --muted:#9a9a9a;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Press Start 2P', monospace, sans-serif;
-  background:radial-gradient(circle at 10% 10%, rgba(0,242,255,0.06), transparent 10%),
-             linear-gradient(180deg,#001a2b 0%, #000 60%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-}
-.site-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 32px;
-  background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
-  border-bottom:2px solid rgba(0,242,255,0.06);
-}
-.logo{
-  font-size:18px;
-  letter-spacing:4px;
-  color:var(--neon);
-  text-shadow:0 0 8px rgba(0,242,255,0.35);
-}
-.nav a{
-  color:rgba(230,247,255,0.8);
-  text-decoration:none;
-  margin-left:18px;
-  font-size:10px;
-}
-.hero{
-  display:flex;
-  gap:24px;
-  padding:48px 32px;
-}
-.hero-inner{
-  flex:1;
-}
-.hero h1{
-  font-size:36px;
-  margin:0 0 12px 0;
-  color:var(--neon);
-  text-shadow:0 0 12px rgba(0,242,255,0.25);
-}
-.hero p{margin:0 0 18px 0;color:#bfeeff}
-.cta{
-  display:inline-block;
-  padding:12px 20px;
-  background:linear-gradient(90deg,var(--accent),#ff6b6b);
-  color:#ffffff;
-  text-decoration:none;
-  border-radius:6px;
-  box-shadow:0 6px 18px rgba(255,45,149,0.14);
-}
-.scoreboard{
-  width:260px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border:1px solid rgba(0,242,255,0.06);
-  padding:16px;
-  border-radius:6px;
-}
-.scoreboard h2{margin:0 0 8px 0;color:var(--neon);font-size:12px}
-.features{padding:24px 32px;background:linear-gradient(180deg, transparent, rgba(0,0,0,0.2));}
-.features h2{font-size:14px;color:var(--neon)}
-.site-footer{padding:18px 32px;border-top:1px solid rgba(255,255,255,0.02);font-size:11px;color:#9fdcff}
+body{margin:0;font-family:Arial, sans-serif;background:linear-gradient(180deg,#05030a 0%, #0b0720 100%);color:var(--neon);min-height:100vh}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;border-bottom:2px solid rgba(255,255,255,0.03)}
+.logo{font-family:'Press Start 2P',monospace;font-size:18px;letter-spacing:2px;color:var(--accent);text-shadow:0 0 10px rgba(255,45,149,0.25)}
+.main-nav a{color:var(--neon);text-decoration:none;margin-left:18px;font-size:12px;opacity:0.9}
+.hero{padding:80px 36px;text-align:center}
+.hero h1{font-family:'Press Start 2P',monospace;font-size:28px;margin:0 0 12px;color:var(--neon);text-shadow:0 0 20px rgba(0,255,234,0.08)}
+.hero p{color:var(--muted);max-width:720px;margin:0 auto 20px}
+.cta{display:inline-block;padding:14px 22px;border-radius:6px;background:linear-gradient(90deg,var(--accent),#ffa3d6);color:#05030a;font-weight:bold;text-decoration:none}
+.features{display:flex;gap:24px;padding:40px 36px;max-width:1000px;margin:0 auto}
+.feature{flex:1;background:rgba(255,255,255,0.02);padding:18px;border-radius:8px}
+.feature h2{margin:0 0 8px;color:#fff;font-size:14px}
+.site-footer{text-align:center;padding:24px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 
-/* Small screens */
-@media(max-width:720px){
-  .hero{flex-direction:column}
-  .scoreboard{width:100%}
-  .nav{display:none}
-}
+/* Retro scanlines */
+body::after{content:'';pointer-events:none;position:fixed;left:0;top:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
+
+@media(max-width:700px){.features{flex-direction:column;padding:24px}.hero h1{font-size:20px}.logo{font-size:12px}}
