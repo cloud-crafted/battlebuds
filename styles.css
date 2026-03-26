@@ -1,47 +1,30 @@
-/* Classic arcade shooter look: dark background, neon colors, pixel-ish font feel */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+/* Classic arcade shooter aesthetic */
 :root{
-  --bg:#05030a;
-  --neon:#33ffcc;
-  --accent:#ff3366;
-  --muted:#9aa0a6;
+  --bg:#051724;
+  --accent:#ffde59;
+  --muted:#7fb4d6;
+  --glass: rgba(255,255,255,0.04);
 }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#02111a 0%,#051724 60%);color:var(--accent)}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.logo{font-size:20px;letter-spacing:6px;color:var(--accent);margin:0}
+.nav .btn{color:var(--muted);text-decoration:none;margin-left:18px;padding:8px 12px;border:1px solid rgba(255,255,255,0.04);border-radius:6px}
+.hero{display:flex;gap:32px;align-items:center;padding:48px;}
+.intro{max-width:520px}
+.intro h2{font-size:28px;margin:0 0 12px;color:var(--accent)}
+.intro p{color:var(--muted);line-height:1.4}
+.cta{display:inline-block;margin-top:16px;padding:12px 18px;background:var(--accent);color:#091218;text-decoration:none;border-radius:6px;font-weight:700}
+.mock-screen{width:420px;height:260px;background:#001926;border:4px solid rgba(255,255,255,0.03);position:relative;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+.ship{width:18px;height:18px;background:var(--accent);position:absolute;left:40%;bottom:18px;border-radius:3px;box-shadow:0 0 8px var(--accent)}
+.enemy{width:12px;height:12px;background:#ff6b6b;position:absolute;border-radius:2px;box-shadow:0 0 6px #ff6b6b}
+.enemy.e1{left:30%;top:40%}
+.enemy.e2{left:70%;top:22%}
+.cards{display:flex;gap:18px;padding:32px}
+.card{background:var(--glass);padding:18px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);flex:1;color:var(--muted)}
+.site-footer{text-align:center;padding:20px 0;color:rgba(255,255,255,0.25);border-top:1px solid rgba(255,255,255,0.02)}
 
-html,body{height:100%;}
-body{
-  margin:0;
-  background: radial-gradient(ellipse at center, rgba(255,255,255,0.02), transparent 40%), linear-gradient(180deg,#06040a 0%, #020102 100%);
-  color:var(--neon);
-  font-family: 'Press Start 2P', system-ui, monospace;
-  -webkit-font-smoothing:antialiased;
-  padding:2rem;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
+/* Retro scanlines */
+.mock-screen:after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;pointer-events:none}
 
-.title{text-align:center; margin-bottom:2rem;}
-.title h1{font-size:2.4rem; color:var(--accent); text-shadow:0 0 10px rgba(255,51,102,0.25), 0 0 30px rgba(51,255,204,0.08); margin:0}
-.title .tag{color:var(--muted); font-size:0.7rem; margin-top:0.5rem}
-
-.content{max-width:900px; width:100%; background:rgba(0,0,0,0.25); padding:2rem; border-radius:8px; box-shadow:0 8px 30px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.02)}
-.pitch{margin-bottom:1.5rem}
-.pitch h2{color:var(--neon); margin:0 0 0.5rem 0}
-.pitch p{color:var(--muted); line-height:1.6}
-
-.cta{display:inline-block; margin-top:1rem; padding:0.8rem 1.2rem; background:linear-gradient(90deg,var(--accent),var(--neon)); color:#05030a; text-decoration:none; border-radius:4px; box-shadow:0 6px 20px rgba(51,51,51,0.6)}
-
-.features ul{color:var(--muted);}
-
-.footer{margin-top:2rem; color:rgba(255,255,255,0.12); font-size:0.7rem}
-
-/* Subtle CRT scanlines */
-body::after{
-  content:"";
-  pointer-events:none;
-  position:fixed; inset:0;
-  background-image:linear-gradient(rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.02) 51%);
-  background-size:100% 4px;
-  mix-blend-mode:overlay;
-}
+@media (max-width:800px){.hero{flex-direction:column}.mock-screen{width:100%;height:200px}}
