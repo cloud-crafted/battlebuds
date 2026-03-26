@@ -1,3 +1,25 @@
+/* Classic arcade shooter inspired styles */
+:root{
+  --bg:#050312;
+  --accent:#ff0066;
+  --retro:#0ff;
+  --muted:#9aa1bf;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#001 0%,var(--bg) 60%);color:var(--retro);min-height:100vh}
+.site-header{padding:48px 24px;text-align:center;border-bottom:2px solid rgba(255,255,255,0.04)}
+.logo{font-size:40px;letter-spacing:4px;color:var(--accent);margin:0}
+.tag{color:var(--muted);margin-top:8px}
+.hero{display:flex;align-items:center;justify-content:center;padding:80px 20px}
+.terminal{background:rgba(0,0,0,0.5);padding:30px;border:2px solid rgba(255,255,255,0.06);width:min(820px,95%);text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.6)}
+.terminal h2{color:var(--accent);margin:0 0 8px}
+.cta{display:inline-block;margin-top:12px;padding:12px 20px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:40px 24px}
+.features article{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border:1px solid rgba(255,255,255,0.03)}
+footer{padding:20px;text-align:center;color:var(--muted)}
+
+/* pixelated retro accent */
+body{image-rendering:pixelated}
 /* Classic arcade shooter inspired styling */
 :root{
   --bg:#071019; /* deep navy */
