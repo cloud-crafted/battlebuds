@@ -1,24 +1,32 @@
-/* Classic arcade shooter-style theme */
-:root{
-  --bg:#050505;
-  --neon:#39ff14; /* bright green */
-  --accent:#ff2d95; /* magenta */
-  --muted:#9aa2b0;
-}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#000,#03030a);color:var(--neon);}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;border-bottom:2px solid rgba(57,255,20,0.06)}
-.logo{font-size:20px;letter-spacing:4px;color:var(--accent);margin:0;text-shadow:0 0 8px rgba(255,45,149,0.18)}
-.main-nav a{color:var(--neon);text-decoration:none;margin-left:18px;font-size:12px}
-.hero{display:flex;align-items:center;justify-content:space-between;padding:48px 32px}
-.intro{max-width:720px}
-.intro h2{font-size:28px;margin:0 0 12px;color:var(--neon);text-shadow:0 0 6px rgba(57,255,20,0.12)}
-.intro p{color:var(--muted);max-width:58ch}
-.cta{display:inline-block;margin-top:18px;padding:10px 18px;border:2px solid var(--neon);color:var(--bg);background:var(--neon);text-decoration:none;font-weight:700}
-.sprite{width:220px;height:120px;background:repeating-linear-gradient(-45deg, rgba(255,45,149,0.08) 0 6px, transparent 6px 12px);box-shadow:0 6px 40px rgba(255,45,149,0.06);border:2px solid rgba(255,45,149,0.06)}
-.features{display:flex;gap:24px;padding:32px}
-.features article{flex:1;background:rgba(255,255,255,0.02);padding:18px;border:1px solid rgba(57,255,20,0.03)}
-.site-footer{padding:20px 32px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+/* Classic arcade-styled baseline */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* small responsive tweaks */
-@media(max-width:720px){.hero{flex-direction:column}.sprite{width:100%;height:120px;margin-top:18px}}
+:root{
+  --bg:#081226;
+  --neon:#00e6ff;
+  --accent:#ff3b8a;
+  --panel:#041022;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial, sans-serif;background:radial-gradient(circle at 10% 10%, rgba(0,230,255,0.06), transparent 10%), var(--bg);color:#cfeaff}
+
+.site-header{padding:32px;text-align:center}
+.logo{font-family:'Press Start 2P', monospace;color:var(--neon);margin:0;font-size:28px;letter-spacing:2px;text-shadow:0 0 8px rgba(0,230,255,0.2)}
+.tag{margin:6px 0 0;color:#9fc9d8;font-size:12px}
+
+.hero{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;padding:40px;max-width:1100px;margin:0 auto}
+.pitch h2{font-family:'Press Start 2P',monospace;color:var(--accent);font-size:18px;margin:0 0 12px}
+.pitch p{color:#bde8ff;line-height:1.5}
+.cta{display:inline-block;margin-top:16px;padding:12px 18px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#041022;text-decoration:none;border-radius:6px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,0.6)}
+
+.visual .screen{width:100%;height:220px;background:linear-gradient(180deg,#02122a,#041a2f);border:4px solid #052636;border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 12px 40px rgba(0,0,0,0.7)}
+.screen-text{font-family:'Press Start 2P',monospace;color:rgba(0,230,255,0.12);font-size:12px}
+
+.site-footer{text-align:center;padding:24px;color:#6ea7c1}
+
+/* Small screens */
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr;padding:24px}
+  .visual{order:-1}
+}
