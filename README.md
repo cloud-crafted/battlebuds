@@ -1,12 +1,12 @@
-# BattleBuds - Landing scaffold
+# BattleBuds — Classic Arcade Redesign
 
-Initial landing page scaffold for BAT-6 ticket. Includes:
-- index.html (simple landing)
-- styles.css (retro arcade palette and layout)
+Initial static landing for the BattleBuds website. This commit adds a minimal HTML/CSS prototype to capture the retro arcade aesthetic requested in BAT-6.
+
+Files added:
+- index.html — landing page
+- styles.css — retro arcade styling
 
 Next steps:
-- Add retro webfont (Press Start 2P) and sprite assets.
-- Integrate into the project's frontend stack if it's a React/Vue app.
-- Iterate on copy and visuals with design.
-
-This branch: BAT-6-redo-battlebuds-website
+- Integrate with game backend and real assets
+- Add images, sprites, and animations
+- Accessibility and responsive polish
