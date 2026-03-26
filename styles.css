@@ -1,32 +1,52 @@
-/* Retro arcade inspired styles */
+/* Classic arcade-inspired styles for BattleBuds */
 :root{
-  --bg:#030312;
-  --neon:#00e6ff;
-  --accent:#ff4d6d;
-  --panel:#0b1220;
-  --muted:#9fb1c6;
+  --bg:#081421; /* deep blue */
+  --panel:#0f1724;
+  --accent:#ff4d6d; /* neon red */
+  --accent-2:#4df0ff; /* cyan */
+  --text:#e6f0ff;
+  --pixel: crisp-edges;
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', 'Courier New', monospace;background:linear-gradient(180deg,var(--bg),#07102a);color:var(--muted);}
-.wrapper{max-width:1000px;margin:0 auto;padding:32px}
-.site-header{display:flex;flex-direction:column;align-items:center;gap:8px}
-.logo{font-size:40px;letter-spacing:6px;color:var(--neon);text-shadow:0 0 8px rgba(0,230,255,0.12),0 0 24px rgba(0,230,255,0.06)}
-.tag{font-size:12px;text-transform:uppercase;color:#7aa6b9}
-.hero{margin:36px 0;padding:28px;border:2px solid rgba(0,230,255,0.08);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:8px;}
-.console{background:linear-gradient(90deg,rgba(11,18,32,0.6),rgba(0,0,0,0.2));padding:24px;border-radius:6px;border:1px solid rgba(255,77,109,0.04)}
-.console h2{color:var(--accent);margin:0 0 8px 0}
-.lead{color:#bcdbe6}
-.actions{margin-top:12px;display:flex;gap:12px}
-.btn{display:inline-block;padding:10px 18px;border-radius:6px;color:#07102a;text-decoration:none;background:#ffffff10;border:1px solid rgba(255,255,255,0.02)}
-.btn.primary{background:var(--neon);color:#001;box-shadow:0 6px 18px rgba(0,230,255,0.12),inset 0 -2px rgba(0,0,0,0.2)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:28px}
-.features article{background:var(--panel);padding:16px;border-radius:6px;border:1px solid rgba(0,0,0,0.2)}
-.site-footer{text-align:center;margin-top:28px;color:#546f83}
 
-/* Pixel-like rendering for retro feel */
-.logo, h2, h3{font-family: 'Courier New', monospace}
-
-@media (max-width:600px){
-  .wrapper{padding:16px}
-  .logo{font-size:28px}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: 'Press Start 2P', "Lucida Console", Monaco, monospace;
+  background: linear-gradient(180deg,var(--bg),#021018 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
 }
+
+.bar{
+  padding:18px 28px;
+  background:linear-gradient(90deg, rgba(255,77,109,0.06), rgba(77,240,255,0.02));
+  border-bottom:2px solid rgba(255,255,255,0.03);
+  text-shadow:0 1px 0 rgba(0,0,0,0.6);
+}
+.bar h1{margin:0;font-size:20px;letter-spacing:2px;color:var(--accent);}
+.bar .tag{margin:2px 0 0;font-size:10px;color:var(--text);opacity:0.85}
+
+.main{flex:1}
+.stage{padding:36px;display:flex;gap:28px;align-items:flex-start;justify-content:center}
+.intro{max-width:560px}
+.intro h2{color:var(--accent-2);font-size:20px}
+.intro p{color:var(--text);opacity:0.9;line-height:1.45}
+.cta{display:inline-block;margin-top:12px;padding:10px 16px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+
+.mock-screen .screen{
+  width:420px;height:260px;background:#061018;border:6px solid #04202b;box-shadow:0 8px 30px rgba(3,6,12,0.6);position:relative;overflow:hidden;
+  image-rendering:pixelated;
+}
+.player{width:28px;height:18px;background:linear-gradient(180deg,var(--accent),#ff7b93);position:absolute;left:50%;bottom:18px;margin-left:-14px;border-radius:4px;box-shadow:0 0 14px rgba(255,77,109,0.35)}
+.enemy{width:20px;height:14px;background:linear-gradient(180deg,var(--accent-2),#7fefff);position:absolute;top:40px;border-radius:3px;box-shadow:0 0 8px rgba(77,240,255,0.18)}
+.enemy.e1{left:40px}
+.enemy.e2{right:40px}
+.hud{position:absolute;left:8px;top:8px;font-size:11px;color:#99f1ff;letter-spacing:1px}
+
+.foot{padding:20px;text-align:center;color:#7c9fb4;font-size:12px;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* small responsive tweak */
+@media(max-width:640px){.stage{flex-direction:column;padding:18px}.mock-screen .screen{width:320px;height:200px}}
