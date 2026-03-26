@@ -1,39 +1,30 @@
-/* Retro arcade-inspired stylesheet */
+/* Retro arcade-inspired CSS for BattleBuds */
 :root{
-  --bg:#071629;
-  --accent:#ffcc00;
-  --muted:#9fb8c9;
-  --card:#07283a;
+  --bg:#071017;
+  --accent:#ff0057;
+  --accent-2:#00f0ff;
+  --muted:#9bb0c9;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-  background:linear-gradient(180deg,var(--bg),#001726);
-  color:var(--muted);
-  -webkit-font-smoothing:antialiased;
-}
-.site-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px 32px;background:rgba(0,0,0,0.2);backdrop-filter: blur(2px);
-  border-bottom:2px solid rgba(255,204,0,0.06);
-}
-.logo{font-weight:900;color:var(--accent);letter-spacing:6px;font-size:20px;text-shadow:0 0 8px rgba(255,204,0,0.08)}
-.nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600}
-.hero{
-  display:flex;align-items:center;justify-content:center;padding:84px 24px 64px;background-image:radial-gradient(circle at 20% 20%, rgba(255,204,0,0.06), transparent 10%), linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-}
-.hero .container{max-width:960px;text-align:center}
-.hero h1{font-size:48px;color:var(--accent);margin:0 0 12px;text-shadow:0 6px 20px rgba(0,0,0,0.6)}
-.tag{font-size:18px;color:var(--muted);margin-bottom:18px}
-.cta{display:inline-block;padding:12px 22px;background:var(--accent);color:#001726;border-radius:6px;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,0.45)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:44px 24px 80px;max-width:1100px;margin:0 auto}
-.features article{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-.features h2{color:var(--accent);margin:0 0 8px}
-.site-footer{padding:20px;text-align:center;border-top:1px solid rgba(255,255,255,0.02);color:#6e93a6}
-
-/* Pixel-ish accent for headings */
-@media (prefers-reduced-motion: no-preference){
-  .logo{transform:translateY(0);}
-}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;background:linear-gradient(180deg,var(--bg),#001122);color:var(--muted);}
+.crt{max-width:1000px;margin:40px auto;padding:28px;border:2px solid rgba(255,255,255,0.04);background:rgba(0,0,0,0.25);box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.site-header{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:20px}
+.logo{font-size:44px;color:var(--accent);letter-spacing:4px;margin:0;text-shadow:0 0 8px rgba(255,0,87,0.25)}
+.tag{margin:6px 0 0;color:#8fb0c9;font-size:12px}
+.hero{display:flex;gap:24px;align-items:center;justify-content:space-between}
+.pitch{flex:1}
+.pitch h2{color:var(--accent-2);margin:0 0 10px;font-size:20px}
+.pitch p{margin:0 0 14px;color:#b9dbe9}
+.cta{display:inline-block;padding:10px 18px;background:linear-gradient(90deg,var(--accent),#ff8ab8);color:black;font-weight:700;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(255,0,87,0.12)}
+.mockup{width:360px}
+.screen{background:#001a2a;border:3px solid rgba(0,240,255,0.06);padding:12px;border-radius:6px;color:#7fefff}
+.hud{font-size:11px;background:linear-gradient(90deg, rgba(0,0,0,0.2), transparent);padding:6px;border-radius:4px;margin-bottom:8px}
+.playfield{height:180px;display:flex;align-items:center;justify-content:center;border:2px dashed rgba(127,239,255,0.06);color:#5f9fb0}
+.features{margin-top:22px}
+.features h3{color:var(--accent);margin-bottom:8px}
+.features ul{margin:0;padding-left:18px}
+.site-footer{margin-top:22px;border-top:1px solid rgba(255,255,255,0.02);padding-top:12px;text-align:center}
+.small{font-size:12px;color:#7aa9bf}
+/* CRT scanline effect */
+.crt:after{content:'';position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.01) 50%, transparent 50%);background-size:100% 4px;mix-blend-mode:overlay;opacity:0.25}
+@media (max-width:800px){.hero{flex-direction:column}.mockup{width:100%}.playfield{height:140px}}
