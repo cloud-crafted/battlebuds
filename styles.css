@@ -1,23 +1,30 @@
-/* Classic arcade shooter inspired styling */
+/* Retro arcade style for BattleBuds */
 :root{
-  --bg:#071019; /* deep navy */
-  --neon:#00f5ff; /* cyan */
-  --accent:#ff0055; /* magenta */
-  --muted:#9aa8b2;
+  --bg:#070710;
+  --neon:#00ffea;
+  --accent:#ff2d95;
+  --panel:#0b1020;
+  --glass: rgba(255,255,255,0.03);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg),#00121a);color:var(--neon);min-height:100vh}
-.site-header{padding:2rem;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
-.title{font-size:2.25rem;letter-spacing:2px;margin:0;color:var(--neon);text-shadow:0 0 8px rgba(0,245,255,0.08)}
-.tag{color:var(--muted);margin-top:0.25rem}
-.hero{display:flex;align-items:center;justify-content:center;padding:4rem 1rem}
-.screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:2px solid rgba(0,245,255,0.08);padding:2rem;border-radius:8px;max-width:720px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.chrome{font-size:1.5rem;margin:0 0 0.5rem;color:var(--accent);text-transform:uppercase}
-.lead{color:var(--muted);margin:0 0 1rem}
-.cta{display:inline-block;padding:0.6rem 1rem;border-radius:4px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; font-weight:700;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem}
-.features article{background:rgba(255,255,255,0.01);padding:1rem;border:1px solid rgba(255,255,255,0.02);border-radius:6px}
-.site-footer{text-align:center;padding:2rem;color:var(--muted)}
-
-/* Pixel-like accents */
-.title::after{content:"";display:block;height:4px;width:80px;margin:10px auto;background-image:linear-gradient(90deg,var(--neon),var(--accent))}
+html,body{height:100%;margin:0;font-family: 'Courier New', Courier, monospace;background:radial-gradient(ellipse at top,#09102a 0%,var(--bg) 60%);color:#cfeef1}
+.screen{max-width:1100px;margin:24px auto;padding:20px;border:6px solid #06182a;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.title{text-align:center;margin-bottom:8px}
+.title h1{font-size:44px;color:var(--neon);text-shadow:0 0 8px rgba(0,255,234,0.14), 0 0 24px rgba(0,255,234,0.06)}
+.title .tag{color:#9fd9d7;margin-top:6px}
+.menu{display:flex;gap:10px;justify-content:center;margin-bottom:18px}
+.btn{padding:8px 14px;border-radius:4px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));border:1px solid rgba(255,255,255,0.03);color:#9ff; text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,0.6);font-weight:700}
+.hero{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+.arcade-frame{background:linear-gradient(#061028,#05121f);border:3px solid #081726;padding:18px;border-radius:6px}
+.viewport{width:640px;height:320px;background:repeating-linear-gradient(180deg,#00111a 0 2px, transparent 2px 8px), radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02), transparent 20%);position:relative;overflow:hidden;border:4px solid #021426}
+.ship{position:absolute;left:50%;bottom:18px;width:28px;height:18px;background:linear-gradient(90deg,var(--neon),var(--accent));transform:translateX(-50%);clip-path:polygon(50% 0, 100% 100%, 50% 85%, 0% 100%)}
+.enemy{position:absolute;width:30px;height:18px;background:#ffcc00;border:2px solid #331a00;transform:skewX(-8deg)}
+.enemy.e1{left:120px;top:40px}
+.enemy.e2{right:120px;top:70px}
+.info{display:flex;flex-direction:column;gap:12px}
+.panel{background:linear-gradient(180deg,var(--panel),var(--glass));padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
+.panel.stats{display:flex;flex-direction:column;gap:6px}
+.panel.stats div{display:flex;justify-content:space-between;color:#aee}
+.credits{text-align:center;margin-top:12px;color:#6fb6b2;font-size:13px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}
+.viewport{width:100%;height:220px}}
