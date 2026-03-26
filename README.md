@@ -1,13 +1,12 @@
-BattleBuds — Classic redesign
+# BattleBuds - Landing scaffold
 
-This branch contains an initial static HTML/CSS redesign for the BattleBuds website with a classic arcade shooter aesthetic. Files added:
-
-- index.html
-- styles.css
+Initial landing page scaffold for BAT-6 ticket. Includes:
+- index.html (simple landing)
+- styles.css (retro arcade palette and layout)
 
 Next steps:
-- Add assets (sprites, background tiles)
-- Integrate with site templates and build system (if present)
-- Iterate with design for polish
+- Add retro webfont (Press Start 2P) and sprite assets.
+- Integrate into the project's frontend stack if it's a React/Vue app.
+- Iterate on copy and visuals with design.
 
-Ticket: BAT-6
+This branch: BAT-6-redo-battlebuds-website
