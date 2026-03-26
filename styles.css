@@ -1,36 +1,24 @@
-/* Classic arcade shooter aesthetic */
+/* Classic arcade shooter-style theme */
 :root{
-  --bg:#0b0b1a;
-  --accent:#ff3b3b;
-  --accent-2:#ffd166;
-  --text:#e6f0ff;
-  --muted:#9fb1d6;
-  --crt-shadow: rgba(255,255,255,0.03);
+  --bg:#050505;
+  --neon:#39ff14; /* bright green */
+  --accent:#ff2d95; /* magenta */
+  --muted:#9aa2b0;
 }
-
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Courier New', Courier, monospace;background:linear-gradient(180deg,var(--bg),#071026);color:var(--text)}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#000,#03030a);color:var(--neon);}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;border-bottom:2px solid rgba(57,255,20,0.06)}
+.logo{font-size:20px;letter-spacing:4px;color:var(--accent);margin:0;text-shadow:0 0 8px rgba(255,45,149,0.18)}
+.main-nav a{color:var(--neon);text-decoration:none;margin-left:18px;font-size:12px}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:48px 32px}
+.intro{max-width:720px}
+.intro h2{font-size:28px;margin:0 0 12px;color:var(--neon);text-shadow:0 0 6px rgba(57,255,20,0.12)}
+.intro p{color:var(--muted);max-width:58ch}
+.cta{display:inline-block;margin-top:18px;padding:10px 18px;border:2px solid var(--neon);color:var(--bg);background:var(--neon);text-decoration:none;font-weight:700}
+.sprite{width:220px;height:120px;background:repeating-linear-gradient(-45deg, rgba(255,45,149,0.08) 0 6px, transparent 6px 12px);box-shadow:0 6px 40px rgba(255,45,149,0.06);border:2px solid rgba(255,45,149,0.06)}
+.features{display:flex;gap:24px;padding:32px}
+.features article{flex:1;background:rgba(255,255,255,0.02);padding:18px;border:1px solid rgba(57,255,20,0.03)}
+.site-footer{padding:20px 32px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
-.logo{font-size:28px;letter-spacing:4px;color:var(--accent);text-shadow:0 1px 0 var(--crt-shadow)}
-.main-nav a{color:var(--muted);margin-left:18px;text-decoration:none}
-.main-nav a:hover{color:var(--accent-2)}
-
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background-image:radial-gradient(circle at 50% 30%, rgba(255,59,59,0.07), transparent 20%);border-bottom:1px solid rgba(255,255,255,0.02)}
-.hero h1{font-size:48px;margin:0 0 10px;color:var(--accent);text-shadow:0 4px 12px rgba(0,0,0,0.6)}
-.hero p{max-width:700px;color:var(--muted);margin:0 0 20px}
-.cta{display:inline-block;padding:12px 22px;background:linear-gradient(180deg,var(--accent),#c12b2b);color:#090909;border-radius:6px;text-decoration:none;font-weight:bold}
-
-.features{display:flex;gap:20px;padding:60px 40px;justify-content:center}
-.feature{background:rgba(255,255,255,0.02);padding:20px;border-radius:8px;width:260px;text-align:center;border:1px solid rgba(255,255,255,0.02)}
-.feature h2{color:var(--accent-2);margin-top:0}
-
-.site-footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
-
-/* CRT stripes effect */
-body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
-
-/* pixelated look */
-*{image-rendering:crisp-edges}
-
-@media(max-width:720px){.features{flex-direction:column;padding:30px}.hero h1{font-size:34px}}
+/* small responsive tweaks */
+@media(max-width:720px){.hero{flex-direction:column}.sprite{width:100%;height:120px;margin-top:18px}}
