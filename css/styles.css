@@ -1,0 +1,27 @@
+/* Retro arcade style */
+:root{
+  --bg:#071229;
+  --grid:#0f2b44;
+  --accent:#ff416c;
+  --accent2:#00e0ff;
+  --muted:#9fb2c8;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace;background:linear-gradient(180deg,var(--bg),#031026);color:var(--muted)}
+.container{max-width:1000px;margin:0 auto;padding:28px}
+.site-header{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:18px}
+.logo{font-size:36px;color:var(--accent);letter-spacing:4px;margin:0}
+.tag{font-size:10px;color:var(--accent2);margin-top:8px}
+.hero{display:flex;gap:24px;align-items:center;justify-content:center}
+.game-screen{background:repeating-linear-gradient(180deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 8px), linear-gradient(180deg,#031026,#00131b);border:2px solid var(--grid);padding:16px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+.hud{display:flex;justify-content:space-between;color:var(--accent2);font-size:10px;padding:4px 8px}
+.play-area{width:420px;height:220px;background:radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02), transparent 10%), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="4" height="4" fill="rgba(255,255,255,0.02)"/></svg>');position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+.ship{position:absolute;left:48%;bottom:18px;width:28px;height:28px;background:linear-gradient(45deg,var(--accent),#ff8aa0);border-radius:4px;box-shadow:0 0 12px rgba(255,65,108,0.5)}
+.enemy{position:absolute;top:36px;right:60px;width:22px;height:16px;background:linear-gradient(45deg,var(--accent2),#8ef5ff);border-radius:3px;box-shadow:0 0 10px rgba(0,224,255,0.25)}
+.cta{display:flex;align-items:center;justify-content:center;margin-left:8px}
+.btn{display:inline-block;padding:10px 16px;background:linear-gradient(180deg,var(--accent),#ff8aa0);color:white;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(255,65,108,0.25)}
+.about{margin-top:18px;background:rgba(255,255,255,0.02);padding:12px;border-radius:6px}
+.site-footer{margin-top:20px;text-align:center;color:rgba(255,255,255,0.2);font-size:10px}
+
+/* small responsive */
+@media (max-width:600px){.play-area{width:300px;height:160px}.container{padding:12px}.logo{font-size:20px}}

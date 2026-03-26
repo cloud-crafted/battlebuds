@@ -3,37 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BattleBuds — Classic Arcade</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>BattleBuds — Retro Arcade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>BattleBuds</h1>
-      <p class="tag">A real-time persistent war with squad based tactics</p>
+    <header class="site-header">
+      <h1 class="logo">BATTLEBUDS</h1>
+      <p class="tag">A real-time persistent war — squad based tactics</p>
     </header>
 
     <main>
       <section class="hero">
-        <div class="viewport">
-          <div class="ship">▲</div>
-          <div class="enemy">■</div>
+        <div class="game-screen">
+          <div class="hud">
+            <span>Squad Alpha</span>
+            <span>Score: 000420</span>
+          </div>
+          <div class="play-area">
+            <div class="ship"></div>
+            <div class="enemy"></div>
+          </div>
         </div>
-        <p class="intro">Re-living the classic arcade era — fight for your squad, capture territory, and survive the persistent battlefield.</p>
-        <a class="cta" href="#play">Play Now</a>
+        <div class="cta">
+          <a class="btn" href="#">Enter the War</a>
+        </div>
       </section>
 
-      <section class="features">
-        <h2>Features</h2>
-        <ul>
-          <li>Persistent world & real-time battles</li>
-          <li>Squad-based tactics</li>
-          <li>Retro pixel aesthetic</li>
-        </ul>
+      <section class="about">
+        <h2>About BattleBuds</h2>
+        <p>BattleBuds is a persistent multiplayer war with tactical squad gameplay. This site is a retro arcade-style landing page celebrating the combat.</p>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <small>© BattleBuds</small>
     </footer>
   </div>
