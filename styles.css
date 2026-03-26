@@ -1,25 +1,31 @@
-/* Classic arcade shooter aesthetic: bold pixels, neon gradients, scanlines */
+/* Classic arcade shooter look */
 :root{
-  --bg:#07070b;
-  --neon:#00ff9f;
-  --accent:#ff3b6b;
+  --bg:#030303;
+  --neon:#00ffea;
+  --accent:#ff3b3b;
   --muted:#9aa0a6;
+  --grid: rgba(0,255,234,0.06);
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, -apple-system, sans-serif;background:linear-gradient(180deg,var(--bg),#0b0b11);color:var(--muted)}
-.site-header{padding:48px 24px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.03)}
-.logo{font-size:28px;color:var(--neon);letter-spacing:6px;margin:0;text-shadow:0 0 8px rgba(0,255,159,0.12)}
-.tag{margin:6px 0 0;color:#7f8a90;font-size:10px}
-.hero{display:flex;gap:24px;align-items:center;justify-content:center;padding:56px 24px}
-.pitch{max-width:560px}
-.pitch h2{color:var(--accent);font-size:20px;margin:0 0 12px}
-.pitch p{color:#cfd6da;line-height:1.5}
-.cta{display:inline-block;margin-top:16px;padding:12px 20px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#030307;text-decoration:none;border-radius:6px;font-weight:700}
-.screenshot .screen{width:320px;height:200px;border:4px solid rgba(255,255,255,0.04);background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 6px);display:flex;align-items:center;justify-content:center;color:#6ef0c7}
-.site-footer{padding:28px;text-align:center;color:#6b7579;border-top:4px solid rgba(255,255,255,0.02)}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: 'Press Start 2P', monospace, system-ui, -apple-system;
+  background: linear-gradient(180deg,#021012 0%, #030303 60%);
+  color:var(--neon);
+  -webkit-font-smoothing:antialiased;
+}
+.site-header{padding:24px;text-align:center;border-bottom:2px solid rgba(0,255,234,0.08)}
+.site-header h1{margin:0;font-size:28px;letter-spacing:2px;color:var(--neon);text-shadow:0 0 8px rgba(0,255,234,0.18)}
+.tagline{color:var(--muted);margin-top:6px}
+.hero{display:flex;gap:24px;align-items:center;justify-content:center;padding:48px}
+.intro{max-width:640px}
+.intro h2{color:var(--accent);font-size:20px;margin:0 0 12px 0}
+.cta{display:inline-block;padding:12px 18px;background:var(--neon);color:#001; text-decoration:none;border-radius:6px;font-weight:700}
+.screenshot{width:320px;height:200px;border:2px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;color:var(--muted);background-image:linear-gradient(transparent, rgba(0,0,0,0.2));}
+.site-footer{padding:18px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 
-/* pixelated/retro feel */
-.logo, .pitch h2, .cta{filter:contrast(120%)}
+/* Retro scanlines */
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,0,0,0.06) 50%, transparent 50%);background-size:100% 4px;pointer-events:none;opacity:0.25}
 
-/* make it feel more arcade with a subtle scanline overlay */
-body::after{content:"";pointer-events:none;position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.01) 50%, transparent 51%);background-size:100% 4px;mix-blend-mode:overlay}
+/* Pixelated fonts fallback */
+@media (min-width:720px){.site-header h1{font-size:40px}}
