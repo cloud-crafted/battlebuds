@@ -1,21 +1,35 @@
-/* Classic arcade shooter look */
+/* Classic arcade shooter vibe */
 :root{
-  --bg:#07040a;
-  --accent:#ff3d3d;
-  --neon:#39ff14;
-  --text:#e6f2ff;
+  --bg:#05030b;
+  --neon:#ff3b3b;
+  --neon-2:#38d7ff;
+  --accent:#ffd166;
+  --mono:"Press Start 2P", monospace;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,var(--bg),#0b0510);color:var(--text);min-height:100vh}
-.arcade-title{padding:24px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.04)}
-.arcade-title h1{font-size:36px;letter-spacing:6px;color:var(--neon);text-shadow:0 2px 0 rgba(0,0,0,.8),0 0 8px rgba(57,255,20,0.15)}
-.tag{margin:8px 0 0;font-size:10px;color:#9ac3ff}
-.hero{display:flex;justify-content:center;align-items:center;padding:48px}
-.screen{background:linear-gradient(180deg,#061016,#08121b);padding:32px;border:6px solid rgba(57,255,20,0.06);box-shadow:0 8px 30px rgba(0,0,0,.6);width:min(920px,95%);text-align:center}
-.intro{font-size:14px;margin:0 0 16px}
-.cta{display:inline-block;padding:12px 22px;background:linear-gradient(90deg,var(--accent),#ffb86b);color:#0b0610;text-decoration:none;border-radius:4px;font-weight:700}
-.features{padding:24px;text-align:center}
-.features h2{color:var(--accent)}
-.features ul{list-style:none;padding:0;margin:12px 0 0}
-.features li{display:inline-block;margin:0 12px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03);border-radius:4px}
-footer{padding:16px;text-align:center;color:#6b7c94;font-size:12px}
+html,body{height:100%;margin:0;font-family:var(--mono),monospace;background:radial-gradient(circle at 20% 10%, #0a0a1a 0%, var(--bg) 40%), #000;color:#e6eef8}
+.site-header{padding:28px 24px;text-align:center;border-bottom:2px solid rgba(255,255,255,0.04)}
+.site-header h1{font-size:34px;letter-spacing:2px;color:var(--neon);text-shadow:0 0 8px rgba(255,59,59,0.35),0 0 18px rgba(56,215,255,0.08)}
+.tag{color:rgba(230,238,248,0.7);margin-top:6px}
+.hero{display:flex;gap:32px;align-items:center;padding:48px 24px;max-width:1100px;margin:28px auto}
+.pitch{flex:1}
+.pitch h2{font-size:28px;color:var(--neon-2);margin:0 0 8px}
+.pitch p{color:rgba(230,238,248,0.8);line-height:1.4}
+.cta{display:inline-block;margin-top:12px;padding:10px 18px;background:linear-gradient(90deg,var(--neon),var(--neon-2));color:#071120;text-decoration:none;border-radius:6px;font-weight:700}
+.scoreboard{width:220px;padding:16px;border:1px dashed rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+.scoreboard h3{margin:0 0 8px;color:var(--accent)}
+.scores{display:flex;flex-direction:column;gap:8px}
+.team{display:flex;justify-content:space-between;padding:8px 10px;border-radius:4px;background:rgba(0,0,0,0.25);}
+.team.red{border-left:4px solid var(--neon)}
+.team.blue{border-left:4px solid var(--neon-2)}
+.team .label{opacity:0.85}
+.team .value{font-weight:700}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:24px auto;padding:0 24px}
+.features article{padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:6px}
+.features h4{margin:0 0 6px;color:var(--accent)}
+.site-footer{text-align:center;padding:18px 0;color:rgba(230,238,248,0.6)}
+
+/* Pixelated look */
+img,svg{image-rendering:pixelated}
+
+@media(max-width:800px){.hero{flex-direction:column}.scoreboard{width:100%}}
