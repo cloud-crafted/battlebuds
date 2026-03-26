@@ -2,56 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BattleBuds — Classic Arcade</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">BATTLEBUDS</div>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#squads">Squads</a>
-      <a href="#join">Join</a>
-    </nav>
-  </header>
+  <div class="screen">
+    <header class="title">
+      <h1>BattleBuds</h1>
+      <p class="subtitle">A realtime persistent war — squad based tactics</p>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>Real-time persistent war</h1>
-      <p>Squad-based tactics. Pixel bullets. Classic arcade feel.</p>
-      <a class="cta" href="#join">Enlist Now</a>
-    </section>
+    <main class="hero">
+      <div class="cockpit">
+        <section class="overview">
+          <h2>Welcome Commander</h2>
+          <p>Choose your squad and join the ongoing battle. Classic arcade visuals, modern multiplayer.</p>
+          <div class="actions">
+            <a class="btn" href="#">Join Battle</a>
+            <a class="link" href="#">Learn More</a>
+          </div>
+        </section>
+        <aside class="scoreboard">
+          <h3>Current Fronts</h3>
+          <ul>
+            <li>Sector Alpha — <span class="score">72%</span></li>
+            <li>Sector Beta — <span class="score">41%</span></li>
+            <li>Sector Gamma — <span class="score">13%</span></li>
+          </ul>
+        </aside>
+      </div>
+    </main>
 
-    <section id="about" class="card">
-      <h2>About BattleBuds</h2>
-      <p>BattleBuds is a persistent real-time war. Choose a squad, capture territory, and climb the leaderboards.</p>
-    </section>
-
-    <section id="squads" class="squad-grid">
-      <article class="squad">
-        <h3>Red Squadron</h3>
-        <p>Frontline assault specialists.</p>
-      </article>
-      <article class="squad">
-        <h3>Blue Squadron</h3>
-        <p>Long-range tacticians.</p>
-      </article>
-      <article class="squad">
-        <h3>Green Squadron</h3>
-        <p>Support and recon.</p>
-      </article>
-    </section>
-
-    <section id="join" class="card">
-      <h2>Join the Fight</h2>
-      <p>Sign up, form a squad, and start earning territory for your team.</p>
-      <button class="muted">Create Account</button>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <small>© BattleBuds — Classic Arcade Theme</small>
-  </footer>
+    <footer class="footer">
+      <small>Design: Classic arcade shooter — BattleBuds</small>
+    </footer>
+  </div>
 </body>
 </html>

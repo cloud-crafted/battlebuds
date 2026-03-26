@@ -1,23 +1,39 @@
-/* Classic arcade shooter styling: pixel-like, neon colors, dark starfield */
+/* Retro / arcade inspired styles for BattleBuds */
 :root{
-  --bg:#05060a;
-  --panel:#0b0d12;
-  --neon:#ff2d95;
-  --accent:#24d1ff;
-  --muted:#9aa5b1;
+  --bg:#071022;
+  --panel:#0b1830;
+  --accent:#00ffea;
+  --accent2:#ff3b81;
+  --muted:#9aa7bf;
 }
+
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Courier New', Courier, monospace;background:radial-gradient(circle at 10% 10%, #0b1220 0%, var(--bg) 50%), var(--bg);color:#e6f7ff}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,0.03)}
-.logo{font-weight:900;letter-spacing:3px;font-size:22px;color:var(--neon);text-shadow:0 0 8px rgba(255,45,149,0.35)}
-.nav a{color:var(--muted);margin-left:18px;text-decoration:none}
-.hero{padding:64px 28px;text-align:center}
-.hero h1{font-size:48px;margin:0;color:var(--accent);text-shadow:0 0 12px rgba(36,209,255,0.18)}
-.hero p{color:var(--muted);margin:8px 0 18px}
-.cta{display:inline-block;padding:10px 18px;border-radius:6px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#05060a;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);margin:28px;padding:20px;border-radius:8px}
-.squad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;padding:0 28px}
-.squad{background:linear-gradient(180deg,rgba(36,209,255,0.04),rgba(255,45,149,0.02));padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
-.muted{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 14px;border-radius:6px}
-.site-footer{text-align:center;padding:18px;color:var(--muted);font-size:13px}
-@media (max-width:640px){.hero h1{font-size:32px}.site-header{padding:12px}}
+html,body{height:100%;margin:0;font-family: 'Courier New', Courier, monospace;background:var(--bg);color:#d6e7ff}
+.screen{max-width:1100px;margin:40px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:2px solid rgba(255,255,255,0.04);box-shadow: 0 6px 30px rgba(2,6,23,0.6);}
+.title{text-align:center;padding:12px 0}
+.title h1{font-size:48px;letter-spacing:4px;color:var(--accent);text-shadow:0 0 8px rgba(0,255,234,0.12), 0 1px 0 rgba(255,255,255,0.02)}
+.subtitle{color:var(--muted);margin-top:6px}
+
+.hero{display:flex;justify-content:center;padding:20px}
+.cockpit{display:flex;gap:18px;width:100%}
+.overview{flex:2;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:20px;border:1px solid rgba(255,255,255,0.03)}
+.scoreboard{flex:1;background:linear-gradient(180deg, rgba(255,59,129,0.02), rgba(0,255,234,0.01));padding:16px;border:1px solid rgba(255,255,255,0.03)}
+.overview h2{font-size:28px;color:var(--accent2);margin:0 0 8px}
+.overview p{color:var(--muted)}
+.actions{margin-top:14px}
+.btn{display:inline-block;padding:12px 18px;background:linear-gradient(180deg,var(--accent),#00c8b0);color:#00101a;text-decoration:none;border-radius:6px;font-weight:700;box-shadow:0 6px 0 rgba(0,0,0,0.35);}
+.link{margin-left:12px;color:var(--accent);text-decoration:underline}
+
+.scoreboard h3{margin:0 0 10px;color:var(--accent)}
+.scoreboard ul{list-style:none;padding:0;margin:0}
+.scoreboard li{padding:8px 4px;border-bottom:1px dashed rgba(255,255,255,0.03);display:flex;justify-content:space-between}
+.score{color:var(--accent2);font-weight:700}
+
+.footer{text-align:center;padding:10px;color:var(--muted);font-size:13px}
+
+/* Pixel-y accents */
+.title h1, .overview h2{letter-spacing:2px}
+
+@media (max-width:800px){
+  .cockpit{flex-direction:column}
+}
