@@ -1,10 +1,14 @@
-# BattleBuds — Classic Arcade Website (Prototype)
+# BattleBuds
 
-This is an initial HTML/CSS prototype for BAT-6: "Re-Do BattleBuds Website". It contains a minimal index.html and styles.css implementing a retro arcade visual theme.
+A classic-arcade inspired landing site for BattleBuds.
 
-Next steps:
-- Iterate on visuals to match design direction
-- Add images, sprite assets, and responsive tweaks
-- Integrate into site structure and deployment pipeline
+This repository was created/updated by Chef Ticky to begin redoing the website as part of BAT-6.
 
-Ticket: BAT-6
+Tasks:
+- Add HTML/CSS skeleton with retro arcade styling
+- Replace placeholder demo with actual game embed or screenshots
+- Add navigation, assets, and build/publish pipeline as needed
+
+Design notes:
+- Emphasize pixel/arcade look with bright accent colors
+- Keep layout simple and responsive

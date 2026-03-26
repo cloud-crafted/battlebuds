@@ -1,24 +1,29 @@
-/* Classic arcade shooter styling: neon colors, pixel feel */
-:root{--bg1:#060712;--bg2:#0f1224;--neon:#00ffd5;--accent:#ff2d95;--muted:#9aa3b2}
+/* Classic arcade shooter inspired styles */
+:root{
+  --bg:#060708;
+  --accent:#ff3b3b;
+  --accent2:#ffd166;
+  --text:#dfe7ff;
+  --muted:#9aa6c4;
+}
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-body{background:radial-gradient(ellipse at 10% 10%, rgba(0,255,213,0.06) 0%, transparent 10%), linear-gradient(180deg,var(--bg1),var(--bg2));color:#e6eef8}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border-bottom:2px solid rgba(255,255,255,0.03)}
-.logo{font-family:'Courier New',monospace,monospace;letter-spacing:6px;color:var(--neon);font-size:28px;text-shadow:0 0 8px rgba(0,255,213,0.2),0 0 20px rgba(255,45,149,0.06)}
-.nav a{color:var(--muted);margin-left:18px;text-decoration:none}
-.hero{display:flex;align-items:center;justify-content:center;padding:80px 24px;background-image:repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0 2px, transparent 2px 6px)}
-.hero-inner{max-width:960px;text-align:center;padding:40px;border:2px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);backdrop-filter:blur(2px)}
-.tag{font-family:'Courier New',monospace;font-size:36px;margin:0;color:var(--neon);text-shadow:0 0 10px rgba(0,255,213,0.08)}
-.lead{color:var(--muted);margin-top:12px;font-size:18px}
-.cta-row{margin-top:22px}
-.btn{display:inline-block;padding:12px 22px;border-radius:6px;border:2px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8;text-decoration:none;margin:0 8px}
-.btn-primary{background:linear-gradient(90deg,var(--neon),var(--accent));color:#081424;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.6),0 0 24px rgba(0,255,213,0.08)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:40px;max-width:1100px;margin:32px auto}
-.feature{padding:18px;border:1px dashed rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-.feature h3{color:var(--accent);margin-top:0}
-.site-footer{text-align:center;padding:28px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,#041019 0%, var(--bg) 100%);color:var(--text);min-height:100vh}
+.site-header{padding:28px 32px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.03)}
+.logo{font-size:36px;letter-spacing:6px;margin:0;color:var(--accent)}
+.tag{margin:6px 0 0;color:var(--muted);font-size:12px}
+.hero{display:flex;gap:24px;align-items:center;padding:40px 32px;max-width:1100px;margin:24px auto}
+.pitch{flex:2}
+.pitch h2{font-size:22px;margin:0 0 8px;color:var(--accent2)}
+.pitch p{margin:0 0 16px;color:var(--text);opacity:0.95}
+.cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#111;border-radius:6px;text-decoration:none;font-weight:700}
+.screenshot{flex:1}
+.screen-frame{height:160px;background:linear-gradient(135deg,#091233,#00121a);border:3px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:18px auto;padding:0 32px}
+.features article{background:rgba(255,255,255,0.02);padding:16px;border-radius:6px}
+.features h3{margin:0 0 6px;color:var(--accent2);font-size:14px}
+.site-footer{text-align:center;padding:18px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
 
-/* Pixel-art effect for headings (rough) */
-.logo, .tag { transform: translateZ(0); image-rendering: pixelated }
+/* Pixelated subtle borders */
+*{image-rendering:pixelated}
 
-@media (max-width:600px){.tag{font-size:24px}.site-header{padding:12px}}
+@media(max-width:800px){.hero{flex-direction:column}.features{grid-template-columns:1fr}}
