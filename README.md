@@ -1,12 +1,6 @@
-# BattleBuds Website (classic arcade redesign)
+# battlebuds
 
-This is a simple HTML/CSS redesign for the BattleBuds landing experience with a classic arcade shooter aesthetic.
+Re-do of the BattleBuds website per ticket BAT-6. This initial commit adds a retro/classic arcade-inspired landing page (index.html) and styles (styles.css).
 
-Files:
-- index.html — landing page
-- styles.css — arcade-style CSS
-
-Next steps:
-- Add pixel art assets into assets/
-- Integrate with game server to show live state/leaderboard
-- Add accessibility improvements and responsive tweaks
+Ticket: BAT-6 — Re-Do BattleBuds Website
+Repo: https://github.com/cloud-crafted/battlebuds
