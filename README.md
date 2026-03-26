@@ -1,9 +1,10 @@
-# BattleBuds
+# BattleBuds — Classic Arcade Website (Prototype)
 
-Classic arcade-style landing for BattleBuds. This branch was created for ticket BAT-6 to re-do the site UI with a retro shooter aesthetic.
+This is an initial HTML/CSS prototype for BAT-6: "Re-Do BattleBuds Website". It contains a minimal index.html and styles.css implementing a retro arcade visual theme.
 
-Files added:
-- index.html
-- styles.css
+Next steps:
+- Iterate on visuals to match design direction
+- Add images, sprite assets, and responsive tweaks
+- Integrate into site structure and deployment pipeline
 
-Next: implement responsive assets, add actual preview images, and integrate game client.
+Ticket: BAT-6
