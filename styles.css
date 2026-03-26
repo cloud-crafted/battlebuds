@@ -1,22 +1,30 @@
-/* Classic arcade shooter look */
+/* Classic arcade shooter inspired styles (BAT-6) */
 :root{
-  --bg:#06121a;
-  --neon:#00e5ff;
-  --accent:#ff3b81;
-  --muted:#9fb7c6;
+  --bg:#08131f;
+  --panel:#0b2233;
+  --accent:#ff3d81;
+  --accent-2:#00f0ff;
+  --text:#e6f7ff;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family: 'Press Start 2P', system-ui, sans-serif;background:linear-gradient(180deg,var(--bg),#001927);color:var(--neon);padding:2rem}
-.site-header{text-align:center;margin-bottom:2rem}
-.logo{font-size:2.4rem;letter-spacing:0.25rem;color:var(--accent);text-shadow:0 0 8px rgba(255,59,129,0.6),0 0 16px rgba(0,229,255,0.08)}
-.tag{color:var(--muted);margin-top:.5rem;font-size:.65rem}
-.hero{display:flex;flex-direction:column;gap:1.5rem;align-items:center}
-.intro{background:rgba(255,255,255,0.02);padding:1.25rem;border:1px solid rgba(0,229,255,0.06);width:min(900px,96%);text-align:center;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
-.intro h2{color:var(--neon);font-size:1rem;margin-bottom:.6rem}
-.intro p{color:var(--muted);margin-bottom:1rem;font-size:.72rem}
-.cta{display:inline-block;padding:.6rem 1rem;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; border-radius:6px;font-weight:700;text-decoration:none}
-.features{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap;justify-content:center}
-.features article{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:6px;border:1px solid rgba(0,229,255,0.04);width:220px;text-align:center}
-.features h3{color:var(--accent);font-size:.75rem;margin-bottom:.4rem}
-.site-footer{text-align:center;margin-top:2rem;color:var(--muted);font-size:.65rem}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,var(--bg),#041018);color:var(--text);}
+.wrap{max-width:980px;margin:32px auto;padding:24px}
+.site-header{display:flex;flex-direction:column;align-items:center;margin-bottom:24px}
+.logo{font-size:48px;letter-spacing:6px;color:var(--accent);text-shadow:0 2px 0 #000, 0 0 8px rgba(255,61,129,0.35)}
+.tag{margin:6px 0;color:var(--accent-2);font-size:12px}
+.hero{background:linear-gradient(90deg, rgba(0,0,0,0.25), rgba(255,255,255,0.02));padding:28px;border:2px solid rgba(0,240,255,0.08);border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.title{font-size:28px;color:var(--accent);text-shadow:1px 1px 0 #000}
+.lead{opacity:0.9;margin-top:8px}
+.cta{display:inline-block;margin-top:12px;padding:10px 16px;background:linear-gradient(180deg,var(--accent),#d02a6e);color:white;text-decoration:none;border-radius:4px;border:2px solid rgba(0,0,0,0.2);box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+
+.features{margin-top:20px;background:var(--panel);padding:16px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
+.features h2{color:var(--accent-2);font-size:14px}
+.features ul{margin:8px 0 0 18px}
+
+.site-footer{margin-top:26px;padding-top:12px;border-top:1px dashed rgba(255,255,255,0.03);text-align:center;color:rgba(230,247,255,0.7);font-size:12px}
+
+/* Retro scanline overlay */
+body:after{content:"";pointer-events:none;position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);background-size:100% 3px;mix-blend-mode:overlay;opacity:0.6}
+
+@media (max-width:640px){.wrap{padding:12px}.logo{font-size:28px}}
