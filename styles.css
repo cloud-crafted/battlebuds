@@ -1,31 +1,30 @@
-/* Classic arcade shooter inspired styles */
+/* Classic arcade shooter aesthetic */
 :root{
-  --bg:#07070a;
+  --bg:#0b0b1a;
+  --neon:#39ff14;
+  --accent:#ff3b3b;
   --panel:#0f1724;
-  --accent:#00ffcc;
-  --neon:#ff2d95;
-  --text:#e6f0ff;
+  --glass:rgba(255,255,255,0.03);
+  --mono: 'Press Start 2P', monospace;
 }
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{box-sizing:border-box}
-body{margin:0;font-family: 'Courier New', Courier, monospace;background:linear-gradient(180deg,var(--bg),#01030a);color:var(--text);min-height:100vh}
-.site-header{padding:28px 24px;text-align:center;border-bottom:3px solid rgba(255,255,255,0.04)}
-.logo{font-size:48px;letter-spacing:6px;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(0,255,204,0.12),0 0 18px rgba(255,45,149,0.06)}
-.tag{margin:6px 0 0;color:#9fb3cc}
+html,body{height:100%;margin:0;font-family:var(--mono),monospace;background:linear-gradient(180deg,#001 0%, #02021a 60%);color:var(--neon)}
+.arcade-frame{max-width:1000px;margin:32px auto;padding:24px;border:4px solid var(--neon);background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(8,8,20,0.6));box-shadow:0 8px 40px rgba(0,0,0,0.6)}
+.title{font-size:28px;text-align:center;padding:8px 0;letter-spacing:4px}
+.hero{display:flex;gap:24px;align-items:center}
+.blurb{flex:1}
+.blurb h2{margin:0 0 8px 0;color:var(--accent);font-size:16px}
+.blurb p{margin:0 0 12px 0;color:rgba(57,255,20,0.9)}
+.cta{display:inline-block;padding:10px 16px;border:2px solid var(--neon);color:var(--neon);text-decoration:none}
+.mock-screen{width:420px;height:280px;background:linear-gradient(180deg,#001122 0%, #001730 100%);border:6px solid #001f00;position:relative;box-shadow:inset 0 0 40px rgba(57,255,20,0.02)}
+.player{position:absolute;left:50%;bottom:18px;width:28px;height:28px;background:linear-gradient(180deg,var(--neon),#b8ffb8);transform:translateX(-50%);border-radius:4px;box-shadow:0 0 12px rgba(57,255,20,0.3)}
+.enemy{position:absolute;width:22px;height:18px;background:var(--accent);border-radius:3px;box-shadow:0 0 8px rgba(255,59,59,0.3)}
+.enemy-1{left:30%;top:60px}
+.enemy-2{left:70%;top:40px}
+.credits{text-align:center;padding:8px 0;color:rgba(57,255,20,0.6);font-size:12px;margin-top:12px}
 
-.hero{display:flex;gap:24px;align-items:center;justify-content:center;padding:48px;}
-.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:24px;border:2px solid rgba(255,255,255,0.03);width:420px}
-.panel h2{margin:0 0 8px;color:var(--neon);font-size:30px}
-.panel p{margin:0 0 16px;color:#b7cde6}
-.cta{display:inline-block;padding:10px 16px;background:var(--accent);color:#00121a;text-decoration:none;border-radius:4px;font-weight:700}
-.screenshot{width:300px;height:180px;background:repeating-linear-gradient(45deg,#031428 0 8px,#06182b 8px 16px);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.02);color:#234}
+/* Retro scanline */
+body::after{content:'';pointer-events:none;position:fixed;inset:0;background-image:linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.02) 50%);background-size:100% 4px;mix-blend-mode:multiply}
 
-.features{display:flex;gap:18px;padding:36px;justify-content:center}
-.features article{background:var(--panel);padding:18px;border:1px solid rgba(255,255,255,0.02);width:220px}
-.features h3{margin-top:0;color:var(--accent)}
-
-.site-footer{text-align:center;padding:20px;color:#8fa6c6;border-top:1px solid rgba(255,255,255,0.02)}
-
-/* pixelated headings */
-.logo{font-family:monospace;transform:translateY(-2px)}
-
-@media (max-width:800px){.hero{flex-direction:column;padding:24px}.features{flex-direction:column;align-items:center}}
+@media(max-width:800px){.hero{flex-direction:column}.mock-screen{width:100%;height:200px}}
