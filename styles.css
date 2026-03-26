@@ -20,3 +20,26 @@ footer{padding:20px;text-align:center;color:var(--muted)}
 
 /* pixelated retro accent */
 body{image-rendering:pixelated}
+/* Classic arcade shooter inspired styling */
+:root{
+  --bg:#071019; /* deep navy */
+  --neon:#00f5ff; /* cyan */
+  --accent:#ff0055; /* magenta */
+  --muted:#9aa8b2;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg),#00121a);color:var(--neon);min-height:100vh}
+.site-header{padding:2rem;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
+.title{font-size:2.25rem;letter-spacing:2px;margin:0;color:var(--neon);text-shadow:0 0 8px rgba(0,245,255,0.08)}
+.tag{color:var(--muted);margin-top:0.25rem}
+.hero{display:flex;align-items:center;justify-content:center;padding:4rem 1rem}
+.screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:2px solid rgba(0,245,255,0.08);padding:2rem;border-radius:8px;max-width:720px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.chrome{font-size:1.5rem;margin:0 0 0.5rem;color:var(--accent);text-transform:uppercase}
+.lead{color:var(--muted);margin:0 0 1rem}
+.cta{display:inline-block;padding:0.6rem 1rem;border-radius:4px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; font-weight:700;text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem}
+.features article{background:rgba(255,255,255,0.01);padding:1rem;border:1px solid rgba(255,255,255,0.02);border-radius:6px}
+.site-footer{text-align:center;padding:2rem;color:var(--muted)}
+
+/* Pixel-like accents */
+.title::after{content:"";display:block;height:4px;width:80px;margin:10px auto;background-image:linear-gradient(90deg,var(--neon),var(--accent))}
