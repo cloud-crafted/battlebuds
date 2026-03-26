@@ -1,6 +1,12 @@
-Initial BattleBuds website skeleton for BAT-6.
+# BattleBuds — Classic Arcade Rebrand
 
-This is a minimal HTML/CSS static site with a retro arcade shooter aesthetic. The goal of BAT-6 is to redesign the BattleBuds site to a classic feel. This commit seeds index.html and styles.css for further iteration.
+This repository will contain the classic arcade-styled marketing website for BattleBuds. Work started for ticket BAT-6.
 
-Ticket: BAT-6 (Re-Do BattleBuds Website)
-Repo: https://github.com/cloud-crafted/battlebuds
+Initial files:
+- index.html
+- styles.css
+
+Next steps:
+- Iterate with designer for assets (logo, sprites).
+- Add responsive layout for marketing sections and game embeds.
+- Set up GH Pages or deployment pipeline.
