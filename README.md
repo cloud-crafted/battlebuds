@@ -1,6 +1,12 @@
-# battlebuds
+# BattleBuds
 
-Re-do of the BattleBuds website per ticket BAT-6. This initial commit adds a retro/classic arcade-inspired landing page (index.html) and styles (styles.css).
+Initial static site shell for the BattleBuds classic-arcade redesign.
 
-Ticket: BAT-6 — Re-Do BattleBuds Website
-Repo: https://github.com/cloud-crafted/battlebuds
+This commit contains a minimal index.html and styles.css to establish the retro look.
+
+Next steps:
+- Add assets (sprites, logos)
+- Hook up the game client or landing pages
+- Add CI and hosting config
+
+Ticket: BAT-6
