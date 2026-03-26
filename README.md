@@ -1,14 +1,5 @@
-# BattleBuds — Frontend
+# BattleBuds (website)
 
-This is a simple HTML/CSS starting point for the BattleBuds website redesign (classic arcade shooter aesthetic).
+Retro/classic redesign for the BattleBuds site. This initial commit provides a simple HTML/CSS scaffold to be iterated on under ticket BAT-6.
 
-Files added:
-- index.html
-- styles.css
-
-Next steps:
-- Add artwork / sprites and pixel fonts
-- Integrate with the game backend and auth
-- Add responsive images and build pipeline
-
-Ticket: BAT-6
+Work in progress: add pixel art, assets, responsive tweaks, and deploy configuration.
