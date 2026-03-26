@@ -1,40 +1,23 @@
-/* Classic arcade-inspired stylesheet for BattleBuds */
-
+/* Classic arcade shooter styling: pixel-like, neon colors, dark starfield */
 :root{
   --bg:#05060a;
-  --accent:#ff3b3b;
-  --accent-2:#ffd166;
+  --panel:#0b0d12;
+  --neon:#ff2d95;
+  --accent:#24d1ff;
   --muted:#9aa5b1;
-  --neon:#00ffc8;
-  --glass: rgba(255,255,255,0.04);
 }
-
-*{box-sizing:border-box;margin:0;padding:0;font-family: "Courier New", Courier, monospace}
-html,body,#root{height:100%}
-body{background:linear-gradient(180deg,#03050a 0%,var(--bg) 100%);color:var(--accent-2);}
-.container{max-width:980px;margin:48px auto;padding:24px}
-.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-.logo{font-size:48px;letter-spacing:6px;color:var(--accent);text-shadow:0 0 8px rgba(255,59,59,0.18),0 0 20px rgba(0,255,200,0.04)}
-.tag{color:var(--muted);font-size:14px}
-
-.hero{display:flex;gap:24px;align-items:center;padding:24px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-.console{flex:1;padding:16px}
-.console h2{color:var(--neon);font-size:32px;text-shadow:0 0 12px rgba(0,255,200,0.08)}
-.console p{color:var(--muted);margin-top:8px}
-.cta{display:inline-block;margin-top:14px;padding:12px 18px;background:linear-gradient(90deg,var(--accent),#ff7b7b);color:#111;text-decoration:none;border-radius:6px;font-weight:bold;box-shadow:0 6px 18px rgba(255,59,59,0.12)}
-.screenshot{width:240px;height:160px;background:repeating-linear-gradient(45deg,#071426 0 6px,#0a2540 6px 12px);border-radius:6px;box-shadow:inset 0 0 18px rgba(0,0,0,0.6)}
-
-.features{display:flex;gap:16px;margin-top:22px}
-.feature{flex:1;padding:12px;background:var(--glass);border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
-.feature h3{color:var(--accent-2);margin-bottom:6px}
-.feature p{color:var(--muted);font-size:14px}
-
-.site-footer{margin-top:22px;color:rgba(255,255,255,0.18);font-size:13px;text-align:center}
-
-/* Pixelated accent */
-.pixel-border{image-rendering: pixelated}
-
-@media (max-width:720px){
-  .hero{flex-direction:column}
-  .logo{font-size:36px}
-}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Courier New', Courier, monospace;background:radial-gradient(circle at 10% 10%, #0b1220 0%, var(--bg) 50%), var(--bg);color:#e6f7ff}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.logo{font-weight:900;letter-spacing:3px;font-size:22px;color:var(--neon);text-shadow:0 0 8px rgba(255,45,149,0.35)}
+.nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+.hero{padding:64px 28px;text-align:center}
+.hero h1{font-size:48px;margin:0;color:var(--accent);text-shadow:0 0 12px rgba(36,209,255,0.18)}
+.hero p{color:var(--muted);margin:8px 0 18px}
+.cta{display:inline-block;padding:10px 18px;border-radius:6px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#05060a;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);margin:28px;padding:20px;border-radius:8px}
+.squad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;padding:0 28px}
+.squad{background:linear-gradient(180deg,rgba(36,209,255,0.04),rgba(255,45,149,0.02));padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
+.muted{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 14px;border-radius:6px}
+.site-footer{text-align:center;padding:18px;color:var(--muted);font-size:13px}
+@media (max-width:640px){.hero h1{font-size:32px}.site-header{padding:12px}}
