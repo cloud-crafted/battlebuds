@@ -1,36 +1,31 @@
-/* Classic arcade-inspired styles */
+/* Classic arcade-inspired stylesheet for BattleBuds */
 :root{
-  --bg:#060614;
-  --accent:#ffde00;
-  --muted:#9aa0ff;
-  --panel:#0b0b1a;
+  --bg:#071020; /* deep navy */
+  --accent:#ff3b3b; /* arcade red */
+  --accent-2:#00e6b8; /* neon teal */
+  --panel:#081826;
+  --text:#e6f7ff;
+  --muted:#9fb4c9;
 }
 
 *{box-sizing:border-box}
-body{margin:0;font-family: 'Press Start 2P', Arial, sans-serif;background:linear-gradient(180deg,#070722 0%, #04040a 100%);color:var(--muted);}
+body{font-family: 'Press Start 2P', 'Courier New', monospace; background:linear-gradient(180deg,var(--bg) 0%, #03111a 100%); color:var(--text); margin:0;}
+.site-header{padding:48px 24px; text-align:center; border-bottom:4px solid rgba(255,255,255,0.03);} 
+.logo{letter-spacing:6px; font-size:28px; margin:0; color:var(--accent); text-shadow:0 0 8px rgba(255,59,59,0.25), 0 0 16px rgba(0,230,184,0.035);} 
+.tag{color:var(--muted); margin-top:8px;}
 
-.site-header{padding:36px 24px;text-align:center;border-bottom:4px solid rgba(255,222,0,0.08)}
-.site-header h1{color:var(--accent);font-size:28px;margin:0;text-shadow:0 0 8px rgba(255,222,0,0.12)}
-.site-header .tagline{font-size:10px;margin-top:8px;color:#bfc7ff}
+.hero{display:flex; align-items:center; justify-content:center; padding:64px 16px;}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:2px solid rgba(255,255,255,0.03); padding:32px; width:min(920px,96%); text-align:center;}
+.panel h2{color:var(--accent-2); margin:0 0 12px 0; font-size:20px}
+.panel p{color:var(--muted);}
+.cta{display:inline-block; margin-top:16px; padding:12px 20px; background:var(--accent); color:#050505; text-decoration:none; font-weight:700; border-radius:6px; box-shadow:0 6px 20px rgba(255,59,59,0.12);}
 
-.hero{display:grid;grid-template-columns:1fr;gap:20px;padding:28px;max-width:960px;margin:32px auto}
-.intro{background:linear-gradient(135deg, rgba(255,222,0,0.03), transparent);padding:20px;border:1px solid rgba(255,222,0,0.06);}
-.intro h2{color:var(--accent);margin:0 0 8px 0}
-.intro p{margin:0 0 12px 0;color:#c7cffb}
-.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#050416;text-decoration:none;border-radius:4px;font-weight:700}
+.features{display:flex; gap:16px; padding:32px; justify-content:center;}
+.card{background:var(--panel); border:1px solid rgba(255,255,255,0.02); padding:16px; width:220px; text-align:center;}
+.card h3{color:var(--accent); margin:4px 0}
+.card p{color:var(--muted); font-size:13px}
 
-.features{display:flex;gap:12px;flex-wrap:wrap}
-.features article{flex:1 1 28%;background:var(--panel);padding:14px;border:1px solid rgba(255,255,255,0.02);}
-.features h3{margin-top:0;color:var(--accent);font-size:12px}
-.features p{font-size:11px;color:#c7cffb}
+.site-footer{padding:20px; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02);}
 
-.scoreboard{background:rgba(255,255,255,0.02);padding:12px;border:1px dashed rgba(255,222,0,0.06)}
-.scoreboard h3{margin:0 0 8px 0;color:var(--accent)}
-.scoreboard ol{padding-left:18px;margin:0;color:#d6dcff}
-
-.site-footer{text-align:center;padding:18px;font-size:11px;color:#7d84b7;border-top:1px solid rgba(255,222,0,0.03)}
-
-/* Pixel edge effect */
-@media (min-width:600px){
-  .site-header h1{font-size:40px}
-}
+/* small pixel-like glow */
+@media (min-width:900px){.logo{font-size:44px}}
