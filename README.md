@@ -1,16 +1,9 @@
-BattleBuds — Classic Arcade Website (BAT-6)
+# BattleBuds Website (BAT-6)
 
-This repository contains a simple HTML/CSS static site skeleton for the BattleBuds website redesign described in Jira ticket BAT-6.
+This repo contains the initial static site for BattleBuds — a persistent, squad-based arcade shooter.
 
-Branch: feat/BAT-6-redo-website
+Local preview:
 
-What's included:
-- index.html — landing page skeleton with arcade styling
-- css/styles.css — retro arcade CSS
+- Open index.html in a browser or serve with a static server (e.g. `python -m http.server`).
 
-Next steps:
-- Add game screenshots and assets
-- Improve responsive layout and accessibility
-- Hook up to project site hosting or GitHub Pages
-
-Ticket: https://your-jira-host/browse/BAT-6
+This initial commit implements a retro arcade-inspired HTML/CSS skeleton to iterate on.

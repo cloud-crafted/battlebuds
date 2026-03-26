@@ -1,34 +1,21 @@
-/* Classic arcade shooter theme */
+/* Retro arcade-inspired styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 :root{
-  --bg:#071019;
-  --panel:#081826;
-  --accent:#ff3b3b;
-  --accent2:#00ffd5;
-  --text:#e6f7ff;
+  --bg:#071026; /* deep navy */
+  --neon:#39ff14; /* neon green */
+  --accent:#ff0066; /* magenta */
+  --muted:#9db0c7;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Press Start 2P', monospace, system-ui, -apple-system;
-  background: radial-gradient(ellipse at center,var(--bg),#03040a 60%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-}
-.site-header{padding:48px 24px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.03)}
-.title{font-size:42px;letter-spacing:6px;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(255,59,59,0.35), 0 2px 0 #000}
-.tag{margin-top:8px;color:var(--accent2);opacity:0.9}
-.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:48px;gap:24px}
-.pitch{flex:1;min-width:260px}
-.pitch h2{font-size:20px;margin:0 0 12px;color:var(--accent2)}
-.pitch p{line-height:1.4;color:rgba(230,247,255,0.85)}
-.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--accent),#ffb36b);color:#071019;text-decoration:none;border-radius:6px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.mockup{width:320px;min-width:280px}
-.screen{width:100%;height:220px;border:6px solid #071827;background:linear-gradient(180deg,#00182a,#021524);display:flex;align-items:center;justify-content:center;color:rgba(0,255,213,0.12);font-size:14px}
-/* CRT scanline effect */
-.screen::after{content:"";position:absolute;pointer-events:none;inset:auto 0 0 0;height:100px;background:linear-gradient(transparent 50%, rgba(0,0,0,0.06) 50%);mix-blend-mode:overlay}
-.site-footer{text-align:center;padding:20px 10px;color:rgba(230,247,255,0.6);border-top:1px solid rgba(255,255,255,0.02)}
-@media (max-width:720px){
-  .hero{padding:20px;flex-direction:column}
-  .title{font-size:28px}
-}
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#021220);color:var(--muted);}
+body{background-image:repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.06) 2px 3px);}
+.container{max-width:980px;margin:2rem auto;padding:0 1rem}
+.site-header{display:flex;flex-direction:column;align-items:center;text-align:center;padding:2rem 0}
+.logo{font-family:'Press Start 2P',monospace;color:var(--neon);letter-spacing:3px;margin:0;font-size:2rem;text-shadow:0 0 8px rgba(57,255,20,0.12),0 0 20px rgba(255,0,102,0.06)}
+.tag{margin:0.5rem 0;color:var(--muted)}
+.hero{background:linear-gradient(90deg, rgba(57,255,20,0.03), rgba(255,0,102,0.02));border:1px solid rgba(255,255,255,0.03);padding:2rem;border-radius:8px;margin-bottom:1rem}
+.hero h2{color:var(--neon);font-family:'Press Start 2P',monospace}
+.cta{display:inline-block;margin-top:1rem;padding:0.75rem 1.2rem;background:linear-gradient(90deg,var(--neon),var(--accent));color:#00110a;text-decoration:none;border-radius:6px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.card{background:rgba(0,0,0,0.25);padding:1.25rem;border-radius:6px;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.02)}
+.site-footer{text-align:center;padding:1rem 0;color:#6b7687}
+@media(min-width:900px){.container{padding:0}.site-header{flex-direction:row;justify-content:space-between;padding:2rem 0}.logo{font-size:2.6rem}}
