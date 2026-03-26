@@ -1,15 +1,14 @@
-BattleBuds — classic arcade skin
+# BattleBuds — Frontend
 
-This repository contains a simple static landing page prototype for the BattleBuds re-design requested in BAT-6.
+This is a simple HTML/CSS starting point for the BattleBuds website redesign (classic arcade shooter aesthetic).
 
-Files:
-- index.html: landing page
-- styles.css: classic arcade visual styles
+Files added:
+- index.html
+- styles.css
 
 Next steps:
-- Replace placeholder artwork with game screenshots / sprites
-- Hook up navigation and deployment
-- Add accessibility and responsive refinements
+- Add artwork / sprites and pixel fonts
+- Integrate with the game backend and auth
+- Add responsive images and build pipeline
 
-Ticket: BAT-6 — Re-Do BattleBuds Website
-Repo: https://github.com/cloud-crafted/battlebuds
+Ticket: BAT-6
