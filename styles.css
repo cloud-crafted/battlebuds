@@ -1,23 +1,39 @@
-/* Classic arcade shooter inspired styling */
+/* Classic arcade-inspired styles for BattleBuds */
 :root{
-  --bg:#071019; /* deep navy */
-  --neon:#00f5ff; /* cyan */
-  --accent:#ff0055; /* magenta */
-  --muted:#9aa8b2;
+  --bg:#05021a;
+  --neon:#00ffd5;
+  --accent:#fffb00;
+  --panel:#0b0b1a;
+  --muted:#9aa0ff;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg),#00121a);color:var(--neon);min-height:100vh}
-.site-header{padding:2rem;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
-.title{font-size:2.25rem;letter-spacing:2px;margin:0;color:var(--neon);text-shadow:0 0 8px rgba(0,245,255,0.08)}
-.tag{color:var(--muted);margin-top:0.25rem}
-.hero{display:flex;align-items:center;justify-content:center;padding:4rem 1rem}
-.screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:2px solid rgba(0,245,255,0.08);padding:2rem;border-radius:8px;max-width:720px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.chrome{font-size:1.5rem;margin:0 0 0.5rem;color:var(--accent);text-transform:uppercase}
-.lead{color:var(--muted);margin:0 0 1rem}
-.cta{display:inline-block;padding:0.6rem 1rem;border-radius:4px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; font-weight:700;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem}
-.features article{background:rgba(255,255,255,0.01);padding:1rem;border:1px solid rgba(255,255,255,0.02);border-radius:6px}
-.site-footer{text-align:center;padding:2rem;color:var(--muted)}
 
-/* Pixel-like accents */
-.title::after{content:"";display:block;height:4px;width:80px;margin:10px auto;background-image:linear-gradient(90deg,var(--neon),var(--accent))}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  background: radial-gradient(ellipse at top left,#0b0b1a 0%, #05021a 45%);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{padding:32px 24px;text-align:center;border-bottom:3px solid rgba(255,255,255,0.02)}
+.logo{font-family: 'Courier New', monospace;letter-spacing:6px;color:var(--accent);margin:0;font-size:48px;text-shadow:0 0 8px rgba(255,251,0,0.12),0 0 24px rgba(0,255,213,0.06)}
+.tag{margin:6px 0 0;color:rgba(255,255,255,0.35)}
+
+.hero{display:flex;gap:24px;align-items:center;justify-content:center;padding:48px;max-width:1100px;margin:40px auto}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:28px;border-radius:8px;flex:1;min-width:320px}
+.panel h2{color:var(--neon);margin-top:0;font-size:32px;text-shadow:0 0 12px rgba(0,255,213,0.08)}
+.panel p{color:rgba(255,255,255,0.7)}
+.cta{display:inline-block;margin-top:16px;padding:10px 18px;border-radius:6px;background:linear-gradient(90deg,var(--neon),#9bf0ff);color:#041226;text-decoration:none;font-weight:700}
+
+.screenshot{width:360px;height:220px;background:linear-gradient(180deg,#020214,#08102a);border-radius:6px;border:2px solid rgba(255,255,255,0.03);position:relative;box-shadow:inset 0 0 40px rgba(0,255,213,0.02)}
+.ship{width:40px;height:40px;background:conic-gradient(from 90deg,#fffb00, #00ffd5);position:absolute;left:40%;top:40%;transform:translate(-50%,-50%);border-radius:8px;box-shadow:0 0 12px rgba(0,255,213,0.25)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto;padding:0 24px 48px}
+.features article{background:rgba(255,255,255,0.02);padding:18px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}
+.features h3{color:var(--accent);margin-top:0}
+
+.site-footer{text-align:center;padding:20px 12px;border-top:1px solid rgba(255,255,255,0.02);color:rgba(255,255,255,0.25)}
+
+@media(max-width:800px){.hero{flex-direction:column}.features{grid-template-columns:1fr}}
