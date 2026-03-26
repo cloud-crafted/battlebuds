@@ -1,25 +1,30 @@
-/* Classic arcade shooter look */
+/* Retro arcade-inspired stylesheet for BattleBuds */
 :root{
-  --bg:#071019;
-  --panel:#0f1724;
-  --accent:#ff0044;
-  --accent2:#00e0ff;
-  --muted:#9aa4b2;
+  --bg:#071023; /* deep navy */
+  --neon:#00f5ff; /* cyan neon */
+  --accent:#ff3d7f; /* magenta */
+  --muted:#9aa9c6;
+  --card:#0d1b2a;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Arial', "Press Start 2P", monospace;background:linear-gradient(180deg,var(--bg),#041018);color:#fff}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;background:rgba(0,0,0,0.12);border-bottom:2px solid rgba(255,255,255,0.04)}
-.logo{font-size:20px;letter-spacing:6px;color:var(--accent);text-shadow:0 0 12px rgba(255,0,68,0.35)}
-.nav a{color:var(--muted);margin-left:16px;text-decoration:none;font-size:12px}
-.hero{position:relative;padding:80px 36px;text-align:center}
-.hero h1{font-size:48px;margin:0;color:var(--accent2);text-shadow:0 0 20px rgba(0,224,255,0.2)}
-.tagline{color:var(--muted);margin-top:8px}
-.cta{display:inline-block;margin-top:18px;padding:12px 20px;background:linear-gradient(90deg,var(--accent),#ff8ab3);color:white;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.scanlines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
-.content{padding:28px 36px}
-.cards{display:flex;gap:16px;margin-top:12px}
-.card{flex:1;padding:18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);min-height:80px}
-.muted{color:var(--muted);font-size:11px}
-.footer-cta{background:linear-gradient(90deg,rgba(255,0,68,0.06),rgba(0,224,255,0.03));text-align:center}
-.site-footer{padding:18px 36px;text-align:center;color:var(--muted);font-size:12px}
-@media (max-width:700px){.cards{flex-direction:column}.hero h1{font-size:32px}}
+body{margin:0;font-family: 'Press Start 2P', monospace, system-ui, sans-serif;background:linear-gradient(180deg,var(--bg),#04111a);color:var(--muted);}
+.arcade-banner{padding:2rem;text-align:center;background:repeating-linear-gradient(45deg,rgba(0,0,0,0.08) 0 2px,transparent 2px 6px);border-bottom:4px solid rgba(0,0,0,0.2)}
+.arcade-banner h1{color:var(--neon);margin:0;font-size:2.25rem;letter-spacing:2px;text-shadow:0 0 12px rgba(0,245,255,0.12)}
+.tag{color:var(--accent);opacity:0.95}
+.container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+.hero .screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+.big{font-size:1.15rem;color:#fff}
+.sub{margin-top:.5rem;color:var(--muted)}
+.cta-row{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;margin-right:.6rem;border-radius:4px;color:#071023;text-decoration:none;background:#cbd5e1}
+.btn.primary{background:var(--neon);color:#031018;text-shadow:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem}
+.feature{background:var(--card);padding:1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.03)}
+.feature h2{color:var(--neon);margin:0 0 .5rem}
+.arcade-footer{padding:1rem;text-align:center;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+/* Small pixel accent */
+.icon-sprite{width:48px;height:48px;image-rendering:crisp-edges}
+
+/* Responsive */
+@media(max-width:600px){.arcade-banner h1{font-size:1.4rem}.container{margin:1rem}}

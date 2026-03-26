@@ -1,22 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BattleBuds — Classic Arcade</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">BATTLEBUDS</h1>
-    <p class="tagline">A persistent real-time war with squad-based tactics</p>
+  <header class="arcade-banner">
+    <h1>BattleBuds</h1>
+    <p class="tag">Real-time persistent war • Squad tactics</p>
+  </header>
 
-    <section class="intro">
-      <p>Welcome to the BattleBuds site redesign prototype. This page demonstrates a classic arcade shooter aesthetic using HTML & CSS.</p>
-      <a class="cta" href="#">Play Now</a>
+  <main class="container">
+    <section class="hero">
+      <div class="screen">
+        <p class="big">Welcome, Commander.</p>
+        <p class="sub">Join a squad and fight for territory in real time.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#">Play Now</a>
+          <a class="btn" href="#">Learn More</a>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">&copy; BattleBuds</footer>
-  </div>
+    <section class="features">
+      <article class="feature">
+        <h2>Persistent War</h2>
+        <p>Territories stay captured across sessions — coordinate with your squad.</p>
+      </article>
+      <article class="feature">
+        <h2>Classic Arcade Feel</h2>
+        <p>Pixel-inspired UI, neon colors, and retro sounds.</p>
+      </article>
+      <article class="feature">
+        <h2>Squad Tactics</h2>
+        <p>Form squads, assign roles, and execute coordinated strikes.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="arcade-footer">
+    <small>© BattleBuds — May the best squad win.</small>
+  </footer>
 </body>
 </html>
