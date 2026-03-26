@@ -1,36 +1,38 @@
-/* Classic arcade shooter aesthetic */
+/* Classic arcade shooter vibe: dark background, neon accents, pixel-ish type */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root{
-  --bg:#06060b;
-  --accent:#ff2d5a;
-  --accent-2:#00e6a8;
-  --text:#e6f1ff;
-  --muted:#9aa6bf;
+  --bg:#02040b;
+  --neon:#00ffd5;
+  --accent:#ff004f;
+  --muted:#9aa8b2;
 }
-html,body{height:100%;}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
 body{
-  margin:0;
-  font-family: 'Press Start 2P', Arial, sans-serif;
-  background: radial-gradient(ellipse at center, rgba(10,10,16,1) 0%, rgba(3,3,7,1) 60%);
-  color:var(--text);
+  background: radial-gradient(circle at 10% 10%, rgba(0,255,213,0.04), transparent 20%),
+              linear-gradient(180deg,#01111b 0%, #02040b 100%);
+  color:var(--muted);
+  font-family: 'Press Start 2P', monospace, system-ui;
   -webkit-font-smoothing:antialiased;
 }
-.site-header{padding:48px 24px;text-align:center;border-bottom:4px solid rgba(255,45,90,0.06)}
-.logo{font-size:40px;letter-spacing:6px;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(255,45,90,0.25), 0 0 24px rgba(0,230,168,0.06)}
-.tag{margin-top:8px;color:var(--muted);font-size:12px}
+.site-header{padding:48px 24px;text-align:center}
+.logo{color:var(--neon);font-size:36px;margin:0;letter-spacing:6px}
+.tag{color:rgba(0,255,213,0.85);font-size:10px;margin-top:8px}
 
-.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:64px;gap:24px}
-.intro{flex:1;min-width:260px}
-.intro h2{font-size:22px;color:var(--accent-2);margin:0 0 12px}
-.intro p{color:var(--muted);max-width:40ch}
-.cta{display:inline-block;margin-top:18px;padding:10px 18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041018;text-decoration:none;border-radius:6px;font-weight:700}
+.hero{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;padding:48px}
+.pitch{max-width:520px}
+.pitch h2{color:var(--accent);font-size:18px;margin:0 0 8px}
+.pitch p{color:var(--muted);font-size:12px;line-height:1.5}
+.cta{display:inline-block;margin-top:16px;padding:12px 18px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; text-decoration:none;border-radius:6px}
 
-.screenshot{width:360px;flex:0 0 360px}
-.screen-faux{height:200px;border:6px solid #081021;border-radius:6px;background:linear-gradient(135deg,#081821 0%,#021018 100%);display:flex;align-items:center;justify-content:center;color:#6fbfd6;font-family:monospace}
+.screenshot .screen{width:420px;height:260px;background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 8px),
+linear-gradient(180deg,#08121a,#021014);border:2px solid rgba(0,255,213,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.7) inset;border-radius:6px}
 
-.site-footer{text-align:center;padding:28px 12px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:12px}
+.site-footer{padding:28px;text-align:center;color:rgba(154,168,178,0.6);font-size:10px}
 
-/* small responsive */
-@media (max-width:720px){
-  .hero{padding:28px;flex-direction:column}
-  .screenshot{width:100%}
+/* responsive */
+@media(min-width:900px){
+  .hero{padding:72px}
+  .logo{font-size:52px}
 }
