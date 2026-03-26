@@ -1,0 +1,12 @@
+html,body{height:100%;margin:0;font-family:'Press Start 2P',monospace;background:#040404;color:#e6f7ff}
+.site-header{padding:48px 24px;text-align:center;background:linear-gradient(180deg,#071428,transparent)}
+.title{font-size:36px;letter-spacing:6px;color:#00ffd5;margin:0;text-shadow:0 0 8px rgba(0,255,213,.25)}
+.tag{color:#9ad6ff;margin-top:12px;font-size:10px}
+.hero{display:flex;align-items:center;justify-content:center;height:60vh}
+.panel{background:rgba(0,0,0,.45);border:2px solid rgba(0,255,213,.12);padding:36px;border-radius:6px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+.panel h2{color:#ffd600;margin:0 0 8px 0;font-size:18px}
+.panel p{color:#bfefff;margin:0 0 18px 0;font-size:11px}
+.cta{display:inline-block;padding:12px 18px;border:2px solid #00ffd5;color:#00111a;text-decoration:none;background:#00ffd5;border-radius:4px;font-weight:700}
+.site-footer{padding:20px;text-align:center;color:#6fbbe6;font-size:10px}
+/* Scoreboard / arcade grid accent */
+body::after{content:'';position:fixed;right:12px;top:12px;width:120px;height:80px;background:linear-gradient(90deg,#00111a,#042235);opacity:.06;border:1px solid rgba(255,255,255,.02)}

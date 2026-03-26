@@ -1,13 +1,8 @@
-# BattleBuds — Website (prototype)
+BattleBuds — Classic Arcade Website
 
-This repository contains a minimal static scaffold for the BattleBuds landing page (ticket BAT-1).
+This repository holds the BattleBuds website. This initial commit provides a minimal HTML/CSS starting point for the BAT-6 ticket: re-design the BattleBuds site with a classic arcade shooter aesthetic.
 
-What I added:
-- index.html — basic landing/hero and features sections
-- styles.css — small, dark-themed stylesheet
-
-Next steps (awaiting approval):
-1) Push branch feat/BAT-1-battlebuds-website to GitHub.
-2) Open a draft PR against main with implementation notes.
-
-If you want a different stack (React/Next/Hugo) tell me and I can re-scaffold accordingly.
+Next steps:
+- Iterate on visual design per designer assets
+- Add responsive layout and asset pipeline
+- Integrate with game backend for real-time features
