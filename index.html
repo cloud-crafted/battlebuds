@@ -1,38 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BattleBuds — Classic Arcade</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BattleBuds - Classic Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <h1>BattleBuds</h1>
-    <p class="tagline">Real-time persistent war — squad based tactics</p>
-  </header>
+  <div class="container">
+    <header class="site-header">
+      <h1 class="logo">BATTLEBUDS</h1>
+      <p class="tagline">A persistent, real-time war with squad-based tactics</p>
+    </header>
 
-  <main class="hero">
-    <div class="hud">
-      <div class="score">SCORE: 00000</div>
-      <div class="lives">LIVES: 03</div>
-    </div>
+    <main>
+      <section class="hero">
+        <div class="cabinet">
+          <div class="screen">
+            <h2>Join the fight</h2>
+            <p>Form squads, capture territory, and battle in realtime.</p>
+            <a class="cta" href="#play">Enter Arcade</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="pitch">
-      <h2>Classic Arcade Shooter Style</h2>
-      <p>Play with friends in persistent realtime war. Form squads, capture objectives, and lead your team to victory.</p>
-      <a class="cta" href="#play">Play Now</a>
-    </section>
+      <section class="features">
+        <article>
+          <h3>Persistent War</h3>
+          <p>Actions persist across sessions. Strategize with your squad.</p>
+        </article>
+        <article>
+          <h3>Real-time Combat</h3>
+          <p>Fast-paced combat with classic arcade feel.</p>
+        </article>
+        <article>
+          <h3>Squad Tactics</h3>
+          <p>Coordinate with teammates to dominate the battlefield.</p>
+        </article>
+      </section>
 
-    <section class="features">
-      <div class="feature">Squads</div>
-      <div class="feature">Persistent World</div>
-      <div class="feature">Tactical Combat</div>
-    </section>
-  </main>
+      <section class="notes">
+        <p>This is a first-pass static HTML/CSS redesign for ticket BAT-6. See the repository for source and future integration.</p>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <small>© BattleBuds</small>
-  </footer>
+    <footer>
+      <p>Repo: <a href="https://github.com/cloud-crafted/battlebuds">cloud-crafted/battlebuds</a></p>
+    </footer>
+  </div>
 </body>
 </html>
