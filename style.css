@@ -1,0 +1,24 @@
+/* Classic arcade inspired stylesheet */
+:root{
+  --bg:#0b1020;
+  --accent:#ffdd57;
+  --muted:#9aa6c1;
+  --neon:#39ff14;
+}
+*{box-sizing:border-box}
+body{font-family: 'Press Start 2P', monospace, system-ui, -apple-system; background:linear-gradient(180deg,var(--bg),#071024); color:var(--accent); margin:0; padding:0}
+.site-header{padding:32px 24px; text-align:center; border-bottom:4px solid rgba(255,221,87,0.08)}
+.site-header h1{font-size:28px; margin:0 0 8px}
+.tag{color:var(--muted); font-size:10px; letter-spacing:1px}
+.hero{display:flex; gap:24px; align-items:center; justify-content:center; padding:48px}
+.intro{max-width:520px}
+.intro h2{font-size:20px; margin:0 0 12px}
+.intro p{color:var(--muted); margin:0 0 16px}
+.cta{display:inline-block; padding:12px 18px; background:var(--neon); color:#04120a; border-radius:6px; text-decoration:none; font-weight:700}
+.screenshot .screen{width:360px; height:220px; background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 6px, transparent 6px 12px), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="360" height="220"><rect width="100%" height="100%" fill="%23020a14"/></svg>'); border:3px solid rgba(255,221,87,0.08); box-shadow:0 8px 24px rgba(0,0,0,0.5)}
+.site-footer{padding:18px; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02)}
+
+/* Small responsive adjustments */
+@media (max-width:720px){.hero{flex-direction:column;padding:32px}.screenshot .screen{width:280px;height:160px}}
+
+/* End of prototype styles */
