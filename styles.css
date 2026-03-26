@@ -1,26 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+/* Classic arcade shooter aesthetic */
 :root{
-  --bg:#05030a;
-  --neon:#00ffea;
-  --accent:#ff2d95;
-  --muted:#9a9a9a;
+  --bg:#071019; /* deep navy */
+  --accent:#ff3b3b; /* hot red */
+  --accent-2:#00e6a8; /* neon green */
+  --text:#f2f5f7;
+  --muted:#9fb1c2;
 }
+
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial, sans-serif;background:linear-gradient(180deg,#05030a 0%, #0b0720 100%);color:var(--neon);min-height:100vh}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;border-bottom:2px solid rgba(255,255,255,0.03)}
-.logo{font-family:'Press Start 2P',monospace;font-size:18px;letter-spacing:2px;color:var(--accent);text-shadow:0 0 10px rgba(255,45,149,0.25)}
-.main-nav a{color:var(--neon);text-decoration:none;margin-left:18px;font-size:12px;opacity:0.9}
-.hero{padding:80px 36px;text-align:center}
-.hero h1{font-family:'Press Start 2P',monospace;font-size:28px;margin:0 0 12px;color:var(--neon);text-shadow:0 0 20px rgba(0,255,234,0.08)}
-.hero p{color:var(--muted);max-width:720px;margin:0 auto 20px}
-.cta{display:inline-block;padding:14px 22px;border-radius:6px;background:linear-gradient(90deg,var(--accent),#ffa3d6);color:#05030a;font-weight:bold;text-decoration:none}
-.features{display:flex;gap:24px;padding:40px 36px;max-width:1000px;margin:0 auto}
-.feature{flex:1;background:rgba(255,255,255,0.02);padding:18px;border-radius:8px}
-.feature h2{margin:0 0 8px;color:#fff;font-size:14px}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Press Start 2P', monospace, system-ui;
+  background:linear-gradient(180deg,var(--bg) 0%, #00121a 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.site-header{padding:48px 24px;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
+.logo{font-size:40px;letter-spacing:6px;margin:0;color:var(--accent)}
+.tag{color:var(--muted);margin-top:8px}
+
+.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:48px 24px}
+.pitch{max-width:520px}
+.pitch h2{font-size:20px;margin:0 0 12px;color:var(--accent-2)}
+.pitch p{color:var(--muted);line-height:1.5}
+.cta{display:inline-block;margin-top:18px;padding:12px 20px;border-radius:4px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+
+.screenshot{flex:1;display:flex;justify-content:center}
+.screen{width:320px;height:180px;border:4px solid rgba(255,255,255,0.06);background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 8px, transparent 8px 16px);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
 .site-footer{text-align:center;padding:24px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 
-/* Retro scanlines */
-body::after{content:'';pointer-events:none;position:fixed;left:0;top:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:100% 4px;mix-blend-mode:overlay}
-
-@media(max-width:700px){.features{flex-direction:column;padding:24px}.hero h1{font-size:20px}.logo{font-size:12px}}
+/* responsive */
+@media (max-width:720px){
+  .hero{flex-direction:column}
+  .screenshot{margin-top:20px}
+}
