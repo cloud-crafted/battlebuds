@@ -1,16 +1,14 @@
-# BattleBuds — Website (initial scaffold)
+BAT-6: Re-Do BattleBuds Website
 
-This repository contains an initial static scaffold for the BattleBuds website requested in ticket BAT-6.
+This branch provides an initial HTML/CSS skeleton for a classic arcade-themed redesign of the BattleBuds website as requested in ticket BAT-6.
 
-What I added:
-- index.html — basic landing page using a classic arcade aesthetic
-- styles.css — initial styles (retro colors, scanline effect)
-- README.md — this file
+Files added:
+- index.html — landing page with arcade styling and hero content
+- css/styles.css — arcade/CRT-inspired styles
 
-Next steps (suggested):
-- Replace fonts with a pixel/arcade webfont and add assets (sprites, logos)
-- Add responsive layout and mobile tweaks
-- Integrate with the project's actual frontend framework (if any)
-- Wire up backend and realtime components
+Next steps:
+- Add game art and sprites
+- Add navigation and additional pages (About, Play, Leaderboards)
+- Hook up live game state / real-time lobby where appropriate
 
-Ticket: BAT-6 — Re-Do BattleBuds Website
+Repo: https://github.com/cloud-crafted/battlebuds
