@@ -1,50 +1,18 @@
-/* Classic arcade / pixel shooter theme */
+/* Retro arcade-inspired styles */
 :root{
-  --bg:#061020;
-  --panel:#081726;
+  --bg:#0b0b19;
+  --neon:#39ff14;
   --accent:#ff3b3b;
-  --accent2:#00f6ff;
-  --muted:#9fb6d8;
+  --panel:#0f1226;
+  --muted:#9aa3b2;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: 'Press Start 2P', Arial, sans-serif;
-  background: radial-gradient(ellipse at top left, rgba(0,0,0,0.25), transparent 30%), var(--bg);
-  color:var(--muted);
-  -webkit-font-smoothing:antialiased;
-}
-.site-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 28px;
-  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
-  border-bottom:2px solid rgba(255,255,255,0.03);
-}
-.brand{color:var(--accent);font-size:18px;letter-spacing:2px}
-.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:12px}
-.cta{color:var(--bg);background:var(--accent2);padding:8px 12px;border-radius:4px}
-.main{padding:20px}
-.hero{
-  text-align:center;padding:60px 20px;background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
-}
-.hero h1{color:var(--accent);font-size:28px;margin:0 0 12px}
-.hero p{max-width:800px;margin:0 auto 18px;color:var(--muted);font-size:12px}
-.big-cta{display:inline-block;padding:12px 20px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;margin-top:8px}
-.panel{padding:40px 20px;border-top:1px dashed rgba(255,255,255,0.03)}
-.cards{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
-.card{flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));padding:18px;border-radius:6px}
-.card h3{color:var(--accent2);margin:0 0 8px;font-size:12px}
-.join .big-cta{background:transparent;border:2px solid var(--accent);color:var(--accent)}
-.site-footer{text-align:center;padding:18px 10px;color:rgba(255,255,255,0.3);font-size:11px}
-
-/* Subtle scanline effect */
-body::after{content:"";position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);background-size:100% 4px;opacity:0.6}
-
-/* Responsive */
-@media (max-width:640px){
-  .cards{flex-direction:column}
-  .site-header{padding:12px}
-}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui;background:linear-gradient(180deg,#050511 0%, #0b0b19 100%);color:var(--neon)}
+.arcade-header{padding:28px;text-align:center;border-bottom:4px solid rgba(57,255,20,0.08)}
+.arcade-header h1{font-size:34px;margin:0;color:var(--neon);text-shadow:0 0 8px rgba(57,255,20,0.15)}
+.tag{color:var(--muted);font-size:10px;margin-top:6px}
+.hero{display:flex;gap:24px;align-items:center;justify-content:space-around;padding:40px}
+.pitch{max-width:520px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:24px;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.6)}
+.pitch h2{color:var(--accent);margin-top:0}
+.cta{display:inline-block;margin-top:12px;padding:12px 18px;background:var(--neon);color:#03100b;border-radius:4px;text-decoration:none;font-weight:700}
+.screenshot .screen{width:420px;height:260px;background:repeating-linear-gradient(45deg,#071028 0 6px,#071a2a 6px 12px);display:flex;align-items:center;justify-content:center;color:var(--muted);border:2px solid rgba(255,255,255,0.04)}
+.arcade-footer{text-align:center;padding:18px;color:var(--muted);border-top:1px dashed rgba(255,255,255,0.03)}
