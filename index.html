@@ -1,38 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BattleBuds - Classic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BattleBuds — Classic Arcade</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>BattleBuds</h1>
-      <p class="tag">A persistent, real-time squad-based war</p>
-    </header>
+  <header class="site-header">
+    <h1 class="logo">BATTLEBUDS</h1>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#squads">Squads</a>
+      <a href="#play">Play</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="screen">
-          <div class="ship"></div>
-          <div class="enemy"></div>
-        </div>
-        <div class="cta">
-          <a class="btn" href="#play">Play Now</a>
-        </div>
-      </section>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h2>Real-time persistent war</h2>
+        <p>Squad-based tactics. Pixel mayhem. Classic arcade feel.</p>
+        <a class="btn primary" href="#play">Play Now</a>
+      </div>
+    </section>
 
-      <section class="about">
-        <h2>About BattleBuds</h2>
-        <p>Classic arcade look and feel with modern persistent multiplayer mechanics. Join a squad, fight for territory, and upgrade your arsenal.</p>
-      </section>
-    </main>
+    <section id="about" class="panel">
+      <h3>About BattleBuds</h3>
+      <p>BattleBuds is a real-time persistent war with squad-based tactics. This redesign goes back to a classic arcade shooter look and feel using HTML & CSS.</p>
+    </section>
 
-    <footer>
-      <p>© BattleBuds</p>
-    </footer>
-  </div>
+    <section id="squads" class="panel">
+      <h3>Squads & Tactics</h3>
+      <p>Organize into squads, hold territory, and fight for victory.</p>
+    </section>
+
+    <section id="play" class="panel">
+      <h3>Play</h3>
+      <p>Server status and play links will appear here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© BattleBuds — Classic Arcade Theme</p>
+  </footer>
 </body>
 </html>

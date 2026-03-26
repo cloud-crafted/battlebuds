@@ -1,23 +1,30 @@
-/* Classic arcade shooter aesthetic */
+/* Classic arcade inspired styles */
 :root{
-  --bg:#05121a;
-  --accent:#ff3b3b;
-  --neon:#39ff14;
-  --panel:#081a22;
-  --text:#e6f7ff;
+  --bg:#081229; /* deep navy */
+  --accent:#00ffd5; /* neon teal */
+  --accent-2:#ff3b3b; /* red */
+  --panel:#0b1b33;
+  --text:#e6f0ff;
 }
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace;background:linear-gradient(135deg,var(--bg),#081118);color:var(--text)}
-.wrapper{max-width:980px;margin:2rem auto;padding:2rem;border:3px solid var(--panel);box-shadow:0 0 30px rgba(0,0,0,0.7);}
-header{text-align:center;border-bottom:2px solid rgba(255,255,255,0.05);padding-bottom:1rem}
-h1{font-size:2rem;color:var(--neon);text-shadow:0 0 10px rgba(57,255,20,0.15)}
-.tag{color:#9fdff0;font-size:0.7rem}
-.hero{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:1.5rem 0}
-.screen{width:420px;height:220px;background:repeating-linear-gradient(45deg,rgba(255,255,255,0.02) 0 2px,transparent 2px 6px),radial-gradient(ellipse at center,#052733, #021012);border:2px solid rgba(57,255,20,0.08);position:relative;overflow:hidden}
-.ship{position:absolute;left:30%;bottom:20px;width:28px;height:28px;background:linear-gradient(180deg,var(--neon),#aaff6f);clip-path:polygon(50% 0, 100% 100%, 0 100%);box-shadow:0 0 14px rgba(57,255,20,0.6)}
-.enemy{position:absolute;right:15%;top:30px;width:32px;height:18px;background:linear-gradient(90deg,var(--accent),#ff8b8b);border-radius:6px;box-shadow:0 0 8px rgba(255,59,59,0.5)}
-.cta{display:flex;flex-direction:column;align-items:center}
-.btn{display:inline-block;padding:12px 20px;background:linear-gradient(180deg,var(--accent),#ff6b6b);color:#111;text-decoration:none;border-radius:6px;font-weight:700;box-shadow:0 6px 0 rgba(0,0,0,0.4),0 0 12px rgba(255,59,59,0.12)}
-.about{margin-top:1.5rem;background:rgba(0,0,0,0.05);padding:1rem;border-radius:6px}
-footer{text-align:center;margin-top:1.5rem;color:rgba(255,255,255,0.6)}
 
-@media (max-width:700px){.hero{flex-direction:column}.screen{width:100%;height:180px}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', 'Courier New', monospace;background:linear-gradient(180deg,var(--bg),#031028);color:var(--text)}
+
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;border-bottom:2px solid rgba(0,255,213,0.06)}
+.logo{font-size:20px;letter-spacing:3px;color:var(--accent);text-shadow:0 0 8px rgba(0,255,213,0.12)}
+.nav a{color:var(--text);margin-left:16px;text-decoration:none;font-size:12px}
+
+.hero{padding:48px 20px;text-align:center;background-image:radial-gradient(circle at 50% 30%, rgba(0,255,213,0.06), transparent 20%), url('');background-size:cover}
+.hero-inner{max-width:900px;margin:0 auto;padding:48px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.hero h2{font-size:28px;margin:0 0 8px;color:var(--accent)}
+.hero p{margin:0 0 16px;color:#bfeee8}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;text-decoration:none}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#aaffec);color:#001;box-shadow:0 6px 18px rgba(0,255,213,0.08);font-weight:700}
+
+.panel{max-width:1000px;margin:24px auto;padding:20px;background:var(--panel);border:1px solid rgba(255,255,255,0.02);border-radius:6px}
+.panel h3{margin-top:0;color:var(--accent-2)}
+
+.site-footer{text-align:center;padding:18px;color:#7993b6;font-size:13px}
+
+/* Small responsive tweaks */
+@media (max-width:600px){.site-header{padding:12px}.hero-inner{padding:24px}.hero h2{font-size:20px}}
