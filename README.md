@@ -1,12 +1,12 @@
-BattleBuds - Classic Arcade Redesign
+BattleBuds — Classic theme prototype
 
-This branch starts a minimal HTML/CSS site to re-design BattleBuds with a classic arcade shooter feel.
+This commit provides a minimal HTML/CSS starter for the BattleBuds website re-design (BAT-6).
 
 Files added:
-- index.html
-- css/styles.css
+- index.html: landing layout and copy
+- styles.css: classic arcade-inspired styling
 
 Next steps:
-- Integrate with existing app assets and deployment
-- Iterate on visuals and add sprite assets
-- Add navigation and content pages
+- Add retro graphics / sprites and a hero background
+- Integrate with game assets (logos, screenshots)
+- Mobile layout refinements and accessibility review
