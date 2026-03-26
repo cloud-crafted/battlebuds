@@ -1,12 +1,14 @@
-BattleBuds — Classic Arcade Website
+# BattleBuds — Website (BAT-6)
 
-This repo contains a simple HTML & CSS redesign for the BattleBuds site (task BAT-6). The goal is a classic arcade shooter look and feel.
+This repository workspace was prepared by Chef Ticky to start work on ticket BAT-6: "Re-Do BattleBuds Website".
 
-Files added:
-- index.html
-- styles.css
+Initial files:
+- index.html — arcade-style landing placeholder
+- css/styles.css — basic arcade-themed styles
 
 Next steps:
-- Add assets (sprites, favicon)
-- Integrate site with game backend
-- Iterate with design feedback from Joseph
+- Iterate visuals per design specs
+- Add assets and screenshots
+- Integrate with project frontend bundler/routing
+
+Original ticket: https://github.com/cloud-crafted/battlebuds/
