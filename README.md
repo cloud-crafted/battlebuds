@@ -1,8 +1,12 @@
-# BattleBuds — Classic Arcade Website
+BattleBuds - classic arcade style landing
 
-This is an initial static HTML/CSS redesign for the BattleBuds website (ticket BAT-6). The goal is a classic arcade shooter look and feel. This commit adds a simple landing page (index.html) and styles (styles.css) as a starting point.
+This repository contains a minimal HTML/CSS starting point for the BattleBuds website redesign (BAT-6). The styles aim for a classic arcade shooter aesthetic.
+
+Files:
+- index.html: landing page
+- styles.css: core styles
 
 Next steps:
-- Add assets (pixel sprites, logo) and webfonts
-- Implement responsive layout tweaks and accessibility improvements
-- Hook up to the live site or static hosting pipeline
+- Add assets (sprites, fonts)
+- Implement responsive navigation and gameplay demo
+- Integrate with project backend and CI
