@@ -1,45 +1,49 @@
+<!-- BAT-6: BattleBuds website redesign - initial skeleton -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BattleBuds — Classic Arcade</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>BattleBuds - Classic Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="screen">
-    <header class="title">
-      <h1>BattleBuds</h1>
-      <p class="tag">A persistent realtime war — squad based tactics</p>
-    </header>
+  <header class="site-header">
+    <h1>BattleBuds</h1>
+    <p class="tagline">A real-time persistent war with squad-based tactics</p>
+  </header>
 
-    <nav class="menu">
-      <a href="#play" class="btn">Play</a>
-      <a href="#about" class="btn">About</a>
-      <a href="#squads" class="btn">Squads</a>
-    </nav>
-
-    <main class="hero">
-      <div class="arcade-frame">
-        <div class="viewport">
-          <div class="ship"></div>
-          <div class="enemy e1"></div>
-          <div class="enemy e2"></div>
-        </div>
+  <main class="hero">
+    <section class="intro">
+      <h2>Welcome to the War</h2>
+      <p>Classic arcade shooter style landing. This is a prototype layout for the redesign requested in ticket BAT-6.</p>
+      <div class="cta">
+        <a class="btn" href="#">Enter Battle</a>
+        <a class="btn alt" href="#">Join a Squad</a>
       </div>
-      <aside class="info">
-        <div class="panel">
-          <h2>Live Campaign</h2>
-          <p>Join a squad and fight for territory in real time.</p>
-        </div>
-        <div class="panel stats">
-          <div>Score <span>000120</span></div>
-          <div>Squad <span>Red Dawn</span></div>
-        </div>
-      </aside>
-    </main>
+    </section>
+    <aside class="screenshot">
+      <div class="screen-placeholder">[Gameplay Screenshot Placeholder]</div>
+    </aside>
+  </main>
 
-    <footer class="credits">Designed with ♥ — Classic arcade aesthetic</footer>
-  </div>
+  <section class="features">
+    <article>
+      <h3>Real-Time Combat</h3>
+      <p>Persistent world where squads fight for territory.</p>
+    </article>
+    <article>
+      <h3>Retro Feel</h3>
+      <p>Pixel-inspired graphics and neon UI.</p>
+    </article>
+    <article>
+      <h3>Squad Tactics</h3>
+      <p>Coordinate with allies to control the battlefield.</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <small>© BattleBuds - Prototype site (BAT-6)</small>
+  </footer>
 </body>
 </html>
