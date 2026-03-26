@@ -1,26 +1,50 @@
+/* Classic arcade / pixel shooter theme */
 :root{
-  --bg:#05080b;
-  --panel:#0f1720;
+  --bg:#061020;
+  --panel:#081726;
   --accent:#ff3b3b;
-  --accent-2:#ffd24a;
-  --muted:#9ba6b2;
+  --accent2:#00f6ff;
+  --muted:#9fb6d8;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: 'Press Start 2P', system-ui, monospace;background: radial-gradient(circle at 20% 10%, rgba(255,59,59,0.06), transparent 200px), var(--bg);color:#fff}
-.site-header{padding:36px 24px;text-align:center}
-.logo{font-size:28px;color:var(--accent);margin:0;letter-spacing:2px}
-.tag{color:var(--muted);font-size:10px;margin-top:8px}
-.hero{display:flex;align-items:center;justify-content:center;height:60vh}
-.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));border:3px solid rgba(255,255,255,0.06);padding:32px;width:min(900px,92%);text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.panel h2{color:var(--accent-2);font-size:20px;margin:0 0 12px}
-.panel p{color:var(--muted);font-size:12px;line-height:1.6}
-.actions{margin-top:18px;display:flex;gap:12px;justify-content:center}
-.btn{display:inline-block;padding:12px 18px;border-radius:6px;background:transparent;color:var(--accent-2);text-decoration:none;border:2px solid rgba(255,255,255,0.06);font-size:10px}
-.btn.primary{background:linear-gradient(90deg,var(--accent),#ff8a6b);color:#0b0b0b;border:none}
-.about{padding:28px 20px;text-align:center;background:linear-gradient(90deg, rgba(255,255,59,0.02), transparent);border-top:1px dashed rgba(255,255,255,0.02)}
-.site-footer{text-align:center;padding:18px 0;color:var(--muted);font-size:10px}
-/* retro scanline */
-body::after{content:"";position:fixed;inset:0;background-image:repeating-linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.02) 1px);pointer-events:none;mix-blend-mode:overlay}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  background: radial-gradient(ellipse at top left, rgba(0,0,0,0.25), transparent 30%), var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  border-bottom:2px solid rgba(255,255,255,0.03);
+}
+.brand{color:var(--accent);font-size:18px;letter-spacing:2px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:12px}
+.cta{color:var(--bg);background:var(--accent2);padding:8px 12px;border-radius:4px}
+.main{padding:20px}
+.hero{
+  text-align:center;padding:60px 20px;background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+}
+.hero h1{color:var(--accent);font-size:28px;margin:0 0 12px}
+.hero p{max-width:800px;margin:0 auto 18px;color:var(--muted);font-size:12px}
+.big-cta{display:inline-block;padding:12px 20px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;margin-top:8px}
+.panel{padding:40px 20px;border-top:1px dashed rgba(255,255,255,0.03)}
+.cards{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.card{flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));padding:18px;border-radius:6px}
+.card h3{color:var(--accent2);margin:0 0 8px;font-size:12px}
+.join .big-cta{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.site-footer{text-align:center;padding:18px 10px;color:rgba(255,255,255,0.3);font-size:11px}
 
-/* responsive */
-@media (max-width:600px){.logo{font-size:18px}.panel{padding:20px}}
+/* Subtle scanline effect */
+body::after{content:"";position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);background-size:100% 4px;opacity:0.6}
+
+/* Responsive */
+@media (max-width:640px){
+  .cards{flex-direction:column}
+  .site-header{padding:12px}
+}
