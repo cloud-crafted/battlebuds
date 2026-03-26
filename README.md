@@ -1,13 +1,13 @@
-# BattleBuds — Classic Arcade Website (BAT-6)
+BattleBuds — Classic redesign
 
-This branch contains a minimal HTML/CSS re-design for the BattleBuds landing site with a classic arcade shooter aesthetic. Files added:
+This branch contains an initial static HTML/CSS redesign for the BattleBuds website with a classic arcade shooter aesthetic. Files added:
 
 - index.html
 - styles.css
 
 Next steps:
-- Add assets (logo, sprites)
-- Hook up game/play links
-- Iterate on responsive layout and accessibility
+- Add assets (sprites, background tiles)
+- Integrate with site templates and build system (if present)
+- Iterate with design for polish
 
-Branch: BAT-6-redo-battlebuds-website
+Ticket: BAT-6
