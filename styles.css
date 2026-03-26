@@ -1,28 +1,23 @@
-/* Classic arcade inspired CSS for BattleBuds */
+/* Classic arcade shooter style */
 :root{
-  --bg:#08121a;
-  --accent:#ffcc00;
+  --bg:#070714;
   --neon:#39ff14;
-  --muted:#9fb4c6;
-  --wrap:1100px;
-  --mono: 'Press Start 2P', monospace;
+  --accent:#ff005d;
+  --panel:#0b0b17;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
-body{background:linear-gradient(180deg,#071018 0%,var(--bg) 100%);color:var(--muted);}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:2rem}
-.site-header{border-bottom:3px solid rgba(255,204,0,0.08);padding:1rem 0}
-.logo{color:var(--accent);font-family:var(--mono);letter-spacing:2px;margin:0}
-.tag{margin:0;color:#7ea0b6}
-.hero{padding:6rem 0;text-align:center;background-image:radial-gradient(circle at 10% 10%, rgba(57,255,20,0.04), transparent 10%);}
-.hero h2{color:var(--neon);font-size:2rem;margin:0 0 1rem;font-family:var(--mono)}
-.hero p{max-width:60ch;margin:0 auto 1.5rem;color:#b9d1dd}
-.cta{display:inline-block;background:linear-gradient(90deg,#ffcc00,#ff9900);color:#08121a;padding:.9rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:700}
-.features{padding:3rem 0}
-.features h3{color:var(--accent);font-family:var(--mono)}
-.features ul{display:flex;gap:1rem;list-style:none;padding:0;margin:1rem 0}
-.features li{background:rgba(255,255,255,0.02);padding:1rem;border:1px solid rgba(255,204,0,0.04);border-radius:6px;flex:1}
-.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:1rem 0;margin-top:4rem;color:#6f8a98;text-align:center}
-
-/* Decorative pixel grid */
-.pixel-grid{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.01) 0 1px,transparent 1px 12px),repeating-linear-gradient(0deg,rgba(255,255,255,0.01) 0 1px,transparent 1px 12px)}
+body{margin:0;font-family: 'Arial', 'Courier New', monospace;background:linear-gradient(180deg,#000014 0%,#070714 60%);color:var(--neon);}
+.site-header{padding:36px 24px;text-align:center;border-bottom:2px solid rgba(57,255,20,0.06)}
+.logo{font-size:48px;letter-spacing:6px;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(255,0,93,0.12),0 0 20px rgba(57,255,20,0.04)}
+.tag{margin:6px 0 0;color:#9ef79a;font-size:14px}
+.hero{display:flex;gap:24px;align-items:center;justify-content:center;padding:48px 24px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:28px;border:1px solid rgba(57,255,20,0.06);width:380px;border-radius:6px}
+.panel h2{margin:0 0 8px;color:var(--neon)}
+.panel p{color:#c8ffd0}
+.cta{display:inline-block;margin-top:12px;padding:10px 16px;background:var(--accent);color:white;border-radius:4px;text-decoration:none;font-weight:bold}
+.screen{width:420px;height:240px;background:radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02), transparent 10%),linear-gradient(180deg,#061 0%, #022 100%);border:2px solid rgba(57,255,20,0.06);position:relative;border-radius:4px}
+.ship{position:absolute;left:40%;bottom:18%;width:28px;height:18px;background:linear-gradient(90deg,#ff7a9a,#ff005d);box-shadow:0 0 8px rgba(255,0,93,0.4);transform:skewX(-10deg);}
+.enemy{position:absolute;right:18%;top:12%;width:22px;height:14px;background:linear-gradient(90deg,#39ff14,#7aff5c);box-shadow:0 0 6px rgba(57,255,20,0.25)}
+.features{padding:24px;text-align:center;color:#c8ffd0}
+.site-footer{text-align:center;padding:18px 0;color:#6fe28b;border-top:1px dashed rgba(57,255,20,0.03)}
+@media (max-width:800px){.hero{flex-direction:column}.screen{width:320px;height:180px}.panel{width:92%}}

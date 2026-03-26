@@ -1,8 +1,14 @@
-BattleBuds demo site
+# BattleBuds Website
 
-This repository contains a very small static site for the BattleBuds project. It includes:
+This repository contains a simple static landing page for BattleBuds.
 
-- index.html — home page with a link to the dolphin page
-- dolphin.html — page displaying a dolphin image (sourced from Wikimedia Commons)
+Task: Re-design the BattleBuds site to a classic arcade shooter feel (BAT-6).
 
-This change was created to satisfy ticket BAT-2: "Add Page to BattleBuds Site".
+Files added:
+- index.html
+- styles.css
+
+Next steps:
+- Add assets and sprites
+- Integrate with game backend or hosting pipeline
+- Iterate on design per review
