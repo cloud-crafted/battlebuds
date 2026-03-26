@@ -1,22 +1,26 @@
-/* Classic arcade shooter aesthetic */
+/* Classic arcade-inspired stylesheet */
 :root{
-  --bg1:#08121a;
-  --bg2:#0b2330;
+  --bg:#08111a;
+  --neon:#39ff14;
   --accent:#ff2d95;
-  --accent2:#00f0ff;
-  --muted:#9fb8c7;
+  --muted:#9fb4c4;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:'Press Start 2P',Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--muted)}
-.site-header{padding:36px 24px;text-align:center;border-bottom:4px solid rgba(255,255,255,0.04)}
-.logo{font-size:28px;letter-spacing:6px;color:var(--accent);margin:0}
-.tag{font-size:10px;margin-top:8px;color:var(--accent2)}
-.hero{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;padding:48px}
-.intro{max-width:520px}
-.intro h2{color:var(--accent);font-size:18px;margin:0 0 12px}
-.intro p{font-size:10px;line-height:1.6;color:var(--muted)}
-.cta{display:inline-block;margin-top:14px;padding:12px 18px;background:linear-gradient(90deg,var(--accent),#ffb86b);color:#071117;text-decoration:none;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.screenshot .screen-box{width:360px;height:220px;border:4px solid rgba(255,255,255,0.06);background:repeating-linear-gradient(45deg, rgba(0,0,0,0.2) 0 8px, rgba(255,255,255,0.02) 8px 16px);display:flex;align-items:center;justify-content:center}
-.screen-text{font-size:9px;color:rgba(255,255,255,0.18)}
-.site-footer{text-align:center;padding:18px 8px;border-top:4px solid rgba(255,255,255,0.03);font-size:10px}
-@media (max-width:600px){.hero{flex-direction:column;padding:24px}.screenshot .screen-box{width:280px;height:160px}}
+body{margin:0;font-family: 'Segoe UI', Roboto, system-ui, sans-serif;background:linear-gradient(180deg,#04121a 0%, #08111a 100%);color:var(--muted);min-height:100vh}
+.site-header{padding:48px 24px 12px;text-align:center}
+.logo{font-family:monospace,monospace;letter-spacing:6px;color:var(--neon);font-size:48px;margin:0;text-shadow:0 0 8px rgba(57,255,20,0.15)}
+.tagline{margin:6px 0 0;color:#aacbd9}
+.hero{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding:24px}
+.callout{flex:1 1 360px;max-width:640px;padding:24px}
+.callout h2{color:var(--accent);font-size:28px;margin-top:0}
+.cta{display:inline-block;margin-top:12px;padding:10px 16px;background:var(--neon);color:#00201a;text-decoration:none;font-weight:700;border-radius:4px}
+.screenshot{flex:0 0 320px;padding:16px}
+.screen-placeholder{width:320px;height:180px;background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 6px),linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));display:flex;align-items:center;justify-content:center;color:#e6f7ff;border:2px solid rgba(255,255,255,0.06);box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.features{padding:24px}
+.features ul{max-width:720px;margin:0 auto;padding-left:20px}
+.site-footer{text-align:center;padding:18px 6px;color:#4f6b78}
+
+/* Retro scanline effect */
+body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;background-image:linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.03) 50%);background-size:100% 4px;mix-blend-mode:overlay}
+
+@media(max-width:640px){.logo{font-size:36px}.hero{padding:12px}.screenshot{flex-basis:100%}.screen-placeholder{width:100%;height:200px}}
