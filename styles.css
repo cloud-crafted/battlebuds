@@ -1,23 +1,24 @@
-/* Classic arcade shooter inspired styling */
+/* Classic arcade shooter aesthetic */
 :root{
-  --bg:#071019; /* deep navy */
-  --neon:#00f5ff; /* cyan */
-  --accent:#ff0055; /* magenta */
-  --muted:#9aa8b2;
+  --bg:#0b0b1a;
+  --panel:#0f1224;
+  --accent:#00ffcc;
+  --neon:#ff3d81;
+  --text:#cfe8ff;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg),#00121a);color:var(--neon);min-height:100vh}
-.site-header{padding:2rem;text-align:center;border-bottom:2px solid rgba(255,255,255,0.03)}
-.title{font-size:2.25rem;letter-spacing:2px;margin:0;color:var(--neon);text-shadow:0 0 8px rgba(0,245,255,0.08)}
-.tag{color:var(--muted);margin-top:0.25rem}
-.hero{display:flex;align-items:center;justify-content:center;padding:4rem 1rem}
-.screen{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:2px solid rgba(0,245,255,0.08);padding:2rem;border-radius:8px;max-width:720px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-.chrome{font-size:1.5rem;margin:0 0 0.5rem;color:var(--accent);text-transform:uppercase}
-.lead{color:var(--muted);margin:0 0 1rem}
-.cta{display:inline-block;padding:0.6rem 1rem;border-radius:4px;background:linear-gradient(90deg,var(--neon),var(--accent));color:#001; font-weight:700;text-decoration:none}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem}
-.features article{background:rgba(255,255,255,0.01);padding:1rem;border:1px solid rgba(255,255,255,0.02);border-radius:6px}
-.site-footer{text-align:center;padding:2rem;color:var(--muted)}
+html,body{height:100%;margin:0;font-family: 'Press Start 2P', monospace, system-ui;background:linear-gradient(180deg,var(--bg),#071226);color:var(--text)}
+.site-header{padding:2rem;text-align:center;background:rgba(0,0,0,0.2);border-bottom:2px solid rgba(255,255,255,0.03)}
+.site-header h1{font-size:2rem;margin:0;color:var(--accent);text-shadow:0 0 8px rgba(0,255,204,0.2)}
+.tag{font-size:0.7rem;margin-top:0.5rem;color:#9fb8d9}
+.hero{display:flex;align-items:center;justify-content:center;height:60vh}
+.play{background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 6px), linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.play h2{color:var(--neon);margin:0 0 1rem 0}
+.cta{display:inline-block;padding:0.8rem 1.2rem;background:linear-gradient(90deg,var(--accent),var(--neon));color:#00111a;text-decoration:none;border-radius:6px;font-weight:700}
+.site-footer{text-align:center;padding:1rem;color:#6a829a}
 
-/* Pixel-like accents */
-.title::after{content:"";display:block;height:4px;width:80px;margin:10px auto;background-image:linear-gradient(90deg,var(--neon),var(--accent))}
+/* pixel grid effect */
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.01) 1px, transparent 1px);background-size:24px 24px,24px 24px;pointer-events:none;mix-blend-mode:overlay}
+
+/* small responsive */
+@media(max-width:600px){.site-header h1{font-size:1.4rem}.play{padding:1rem}}

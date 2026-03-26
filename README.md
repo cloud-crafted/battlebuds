@@ -1,12 +1,14 @@
-BattleBuds — Classic arcade-styled landing
+# BattleBuds
 
-This repo contains a minimal static landing page for BattleBuds as a starting point for the BAT-6 ticket.
+Classic arcade-styled landing page prototype for BattleBuds.
 
-Files added:
+This branch addresses the redesign described in BAT-6. It includes a minimal HTML/CSS prototype to give a classic arcade look-and-feel.
+
+Files:
 - index.html
 - styles.css
 
 Next steps:
-- Integrate with the project's existing front-end framework (if any)
-- Add assets (pixel sprites, fonts)
-- Implement responsive/accessible components and site navigation
+- Add assets (pixel art sprites, retro sounds)
+- Integrate with existing site layout and navigation
+- Accessibility and responsive tweaks
