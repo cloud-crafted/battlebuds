@@ -1,15 +1,15 @@
-# BattleBuds (Website)
+BattleBuds — Website
 
-This is a minimal starting point for re-designing the BattleBuds website with a classic arcade shooter aesthetic.
+This repository was initialized as the starting point for BAT-6: Re-Do BattleBuds Website.
 
-Ticket: BAT-6 - Re-Do BattleBuds Website
-Repo: https://github.com/cloud-crafted/battlebuds/
-
-Files added:
-- index.html
-- styles.css
+Design notes:
+- Classic arcade shooter aesthetic (pixel / neon palette)
+- Simple landing page with hero, HUD, and feature callouts
+- HTML + CSS prototype in index.html and styles.css
 
 Next steps:
-- Add assets (pixel fonts, sprites, sound effects)
-- Flesh out pages (lobby, game info, scoreboard)
-- Integrate with game backend for real-time status
+- Add assets (pixel sprites, logos)
+- Integrate with game backend and real-time lobby
+- Iterate on responsive and accessibility improvements
+
+Ticket: BAT-6
